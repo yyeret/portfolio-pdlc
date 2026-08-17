@@ -1,0 +1,8 @@
+# Discovery evidence for initiatives/billing-platform-extraction
+# Semantics: flow history already contains today's coordination tax. The bet is the RATIO:
+# current overhead ~1.3x -> platform brings it to ~1.1x, so execute durations scale by 1.1/1.3.
+name: extract-billing-platform
+arrivals_per_quarter: 6
+wip_limits: plan-commit=3, execute=4
+dependency_tax_current: 1.3
+dependency_tax: 1.1

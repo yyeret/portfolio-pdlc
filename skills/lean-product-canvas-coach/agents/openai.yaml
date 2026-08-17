@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lean Product Canvas Coach"
+  short_description: "Strategy, hypotheses, and experiments for initiatives"
+  default_prompt: "Use $lean-product-canvas-coach to coach this initiative from strategic framing through business outcomes, hypotheses, risks, and small experiments."

@@ -1,0 +1,5 @@
+# What-if for improvements/limit-execute-wip — tighten execute WIP 4 → 3
+name: limit-execute-wip-3
+arrivals_per_quarter: 6
+wip_limits: plan-commit=3, execute=3
+dependency_tax: 1.0
