@@ -1,9 +1,9 @@
 <!-- DRAFT: for Yuval's edit before this repo goes public. -->
-<!-- Working brand word: "learns" (your candidates: reinforcing / learning / adapting). Lives in the title + two body lines; trivial to swap. -->
+<!-- Working brand word: "learns" (your candidates: reinforcing / learning / adapting). Lives in the subtitle + two body lines; trivial to swap. -->
 
-# The portfolio that learns
+# The AI-native portfolio: a PDLC your agents can run
 
-*What happens when your PDLC becomes something agents can run.*
+*Agents do the legwork, humans keep the decisions, and the portfolio learns every cycle.*
 
 By Yuval Yeret
 

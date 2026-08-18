@@ -1,6 +1,7 @@
 # Portfolio PDLC
 
-A portfolio-level product development lifecycle your coding agents can actually run.
+An AI-native, agentic approach to portfolio management: a product development lifecycle
+(PDLC) your coding agents can actually run.
 
 Plain-markdown skills + two small Python scripts turn any folder into a living portfolio
 board: initiatives as cards with evidence-verified stages, a generated kanban and flow
@@ -12,7 +13,7 @@ Built by [Yuval Yeret](https://yuvalyeret.com), distilled from portfolio operati
 developed with large enterprise product organizations, and built spec-driven so agents can
 run it. The thinking behind it: [Scaling Product Orgs with Portfolio Agility](https://yuvalyeret.com/blog/scaling-product-organizations-with-portfolio-agility/).
 
-**The story and the why**: [docs/the-portfolio-that-learns.md](docs/the-portfolio-that-learns.md)
+**The story and the why**: [docs/the-ai-native-portfolio.md](docs/the-ai-native-portfolio.md)
 
 ## What's in the box
 
