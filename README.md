@@ -9,11 +9,10 @@ where the operating model itself gets treated as a product — with Monte Carlo 
 as its discovery tool.
 
 Built by [Yuval Yeret](https://yuvalyeret.com), distilled from portfolio operating systems
-developed with large enterprise product organizations, and shaped by the compounding-loop
-ideas in [compound engineering](https://every.to/source-code/my-ai-had-already-fixed-the-code-before-i-saw-it).
-The thinking behind it: [Scaling Product Orgs with Portfolio Agility](https://yuvalyeret.com/blog/scaling-product-organizations-with-portfolio-agility/).
+developed with large enterprise product organizations, and built spec-driven so agents can
+run it. The thinking behind it: [Scaling Product Orgs with Portfolio Agility](https://yuvalyeret.com/blog/scaling-product-organizations-with-portfolio-agility/).
 
-**The story and the why**: [docs/the-compounding-portfolio.md](docs/the-compounding-portfolio.md)
+**The story and the why**: [docs/the-portfolio-that-learns.md](docs/the-portfolio-that-learns.md)
 
 ## What's in the box
 
@@ -23,7 +22,7 @@ The thinking behind it: [Scaling Product Orgs with Portfolio Agility](https://yu
 | `skills/portfolio-pdlc-wire.md` | Turn whatever an org has (decks, exports, folders) into a wired portfolio workspace |
 | `skills/portfolio-pdlc-assess.md` | Stale-status sweep, outcome-vs-activity x-ray, flow + risk-balance read, review brief |
 | `skills/portfolio-pdlc-advance.md` | Move ONE initiative toward its next decision; prepare (never make) the human call |
-| `skills/portfolio-pdlc-compound.md` | Upgrade a card into a steering instrument: outcome hypothesis, leading indicators, evidence-tagged risks |
+| `skills/portfolio-pdlc-strengthen.md` | Upgrade a card into a steering instrument: outcome hypothesis, leading indicators, evidence-tagged risks |
 | `skills/portfolio-pdlc-improve.md` | Probe the process AND the portfolio topology; capture improvement bets, never impulse-edit |
 | `skills/portfolio-pdlc-simulate.md` | Deterministic Monte Carlo what-ifs: WIP limits, intake shaping, dependency-tax reduction |
 | `skills/sniff-test.md` (+ portfolio add-on) | The diagnostic engine: clarity-vs-stage reads, watermelon hunting, derisking fit |

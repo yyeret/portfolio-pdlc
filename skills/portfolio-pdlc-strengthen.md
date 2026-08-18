@@ -1,12 +1,12 @@
 ---
-name: portfolio-pdlc-compound
+name: portfolio-pdlc-strengthen
 description: Improve the quality, outcome orientation, and derisking of ONE initiative's artifacts in the portfolio PDLC — rewrite activity-framed cards into outcome hypotheses with leading indicators, sharpen riskiest assumptions with evidence/opinion tags, fix derisking-approach mismatches, and capture at most one durable learning. Use on cards flagged activity-oriented, thin on evidence, missing indicators, or carrying committed money with open risks. The loop-2 skill of the portfolio-pdlc family.
 metadata:
   tags: flow-agile, product-strategy
   version: 1.0.0
 ---
 
-# Portfolio PDLC — Compound
+# Portfolio PDLC — Strengthen
 
 ## Outcome
 
@@ -50,7 +50,7 @@ execute/rollout card before the explore card (the umbrella leverage table encode
    (that's an advance move, not yours).
 6. **Record.** Evidence log entry (what changed and why), `orientation` updated only if the
    card now genuinely steers on outcomes, board regenerated.
-7. **Compound — at most one learning.** If this rewrite exposed something durable (a
+7. **Capture — at most one learning.** If this rewrite exposed something durable (a
    recurring anti-pattern, a template gap, a language fix that landed), write ONE
    `learnings/<slug>.md` (contract format). If it implies changing the operating model,
    also capture an `improvements/` card — the learning holds the evidence, the card holds
@@ -64,7 +64,7 @@ execute/rollout card before the explore card (the umbrella leverage table encode
   ghostwriting a consulting artifact.
 - Never upgrade `orientation` as a courtesy. The field follows the words, not the intent.
 - Indicators without current values are flagged `n/a`, not invented.
-- One card, at most one learning, board regenerated — the compound loop stays small on
+- One card, at most one learning, board regenerated — the strengthen loop stays small on
   purpose.
 
 ## Quality Gates

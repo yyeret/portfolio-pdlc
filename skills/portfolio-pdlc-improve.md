@@ -14,7 +14,7 @@ The operating system gets treated as a product: probes run against real workspac
 each fired probe becomes either an improvement card (benefit hypothesis, leading
 indicators, success/kill criteria, discovery approach) or an explicit "checked, quiet"
 line — and **nothing gets changed on the spot**. The improvement backlog is where
-compounding lives; impulse edits to pdlc.md are how operating models rot.
+leverage accumulates; impulse edits to pdlc.md are how operating models rot.
 
 ## Focus argument
 

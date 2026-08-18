@@ -1,6 +1,6 @@
 ---
 name: portfolio-pdlc
-description: Run a portfolio-level, product-oriented PDLC (Explore → Discovery → Plan/Commit → Execute → Rollout → BAU, with humans keeping the investment decisions) as a compounding loop over a plain-file workspace. Use when standing up, operating, or resuming a portfolio of initiatives/epics — seeing where everything is, advancing initiatives with evidence, improving artifact quality and outcome orientation, and continuously improving the process and portfolio construction themselves. Entry point and operating loop for the portfolio-pdlc-* skill family; for one-off diagnostics of a single initiative use sniff-test instead.
+description: Run a portfolio-level, product-oriented PDLC (Explore → Discovery → Plan/Commit → Execute → Rollout → BAU, with humans keeping the investment decisions) as an operating loop that leaves the portfolio sharper every cycle, over a plain-file workspace. Use when standing up, operating, or resuming a portfolio of initiatives/epics — seeing where everything is, advancing initiatives with evidence, improving artifact quality and outcome orientation, and continuously improving the process and portfolio construction themselves. Entry point and operating loop for the portfolio-pdlc-* skill family; for one-off diagnostics of a single initiative use sniff-test instead.
 metadata:
   tags: flow-agile, product-strategy, sdd-process
   version: 1.0.0
@@ -36,10 +36,11 @@ Three ideas, borrowed deliberately:
    Explore → Discovery *(optional)* → Plan/Commit → Execute/Build → Rollout *(optional)* → BAU.
    The question is never "did the ceremony run" but "has confidence grown enough for this
    stage, backed by evidence rather than opinion."
-2. **From compound engineering**: state is *derived from evidence, not declared in documents*.
-   The board is a deterministic projection of initiative frontmatter; stage labels get
-   verified against reality; every unit of work should make the next unit easier, so each
-   cycle may capture one durable learning or improvement bet.
+2. **From spec-driven development**: state is *derived from evidence, not declared in
+   documents*. Specs and cards are the system of record agents work against; the board is
+   a deterministic projection of card frontmatter; stage labels get verified against
+   reality; and each cycle may capture one durable learning or improvement bet, so the
+   system gets easier to run, not heavier.
 3. **From the Portfolio Agility Trailmap**: the operating model is itself a product. It gets
    an improvement backlog, benefit hypotheses, leading indicators, discovery (including
    simulation), and honest kill criteria — walked through the very same lifecycle it manages.
@@ -92,10 +93,10 @@ Work top-down; first matching row wins. Ties inside a row: oldest Tier-1 item fi
 |---|---|---|---|
 | 1 | A prepared human decision is past its `next_decision` date | Surface it: refresh the decision brief, notify, stop piling work behind it | `portfolio-pdlc-advance` (decision-brief mode) |
 | 2 | Contract violations: missing frontmatter, unlogged transitions, board won't build | Restore board integrity | `portfolio-pdlc-assess` (sweep mode) |
-| 3 | Committed money at risk: Execute/Rollout item with open riskiest assumptions, `orientation: activity`, or no leading indicators | Derisk the committed bet | `portfolio-pdlc-compound` |
+| 3 | Committed money at risk: Execute/Rollout item with open riskiest assumptions, `orientation: activity`, or no leading indicators | Derisk the committed bet | `portfolio-pdlc-strengthen` |
 | 4 | An item is aging past its stage threshold or sitting at a decision point | Drive it to the decision | `portfolio-pdlc-advance` |
 | 5 | A Discovery timebox has lapsed without a proceed/stop recommendation | Force the learning to a recommendation | `portfolio-pdlc-advance` |
-| 6 | Any Tier-1 card flagged for outcome orientation or thin evidence | Strengthen the card | `portfolio-pdlc-compound` |
+| 6 | Any Tier-1 card flagged for outcome orientation or thin evidence | Strengthen the card | `portfolio-pdlc-strengthen` |
 | 7 | An improvement bet's next step is Discovery | Run the probe or simulation | `portfolio-pdlc-simulate` / `portfolio-pdlc-advance` |
 | 8 | Board is clean and flowing | Probe the system itself; capture new improvement bets | `portfolio-pdlc-improve` |
 
@@ -129,7 +130,7 @@ and they advance through the same stages as everything else: Explore (framing) �
 | No portfolio workspace exists yet / onboarding an org's material | `portfolio-pdlc-wire` |
 | "Where is everything? What's really going on?" / review prep / systemic doubt | `portfolio-pdlc-assess` |
 | Move one initiative forward; prep an investment/commit decision | `portfolio-pdlc-advance` |
-| A card is weak: activity-framed, unevidenced, no indicators, unclear risks | `portfolio-pdlc-compound` |
+| A card is weak: activity-framed, unevidenced, no indicators, unclear risks | `portfolio-pdlc-strengthen` |
 | "How do we make the PDLC/portfolio itself better?" | `portfolio-pdlc-improve` |
 | What-if on WIP limits, topology change, arrival rate; derisk a big improvement bet | `portfolio-pdlc-simulate` |
 | Deep single-initiative diagnostic | `sniff-test` (in this repo) |

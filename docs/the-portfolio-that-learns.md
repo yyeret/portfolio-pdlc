@@ -1,6 +1,7 @@
 <!-- DRAFT: for Yuval's edit before this repo goes public. -->
+<!-- Working brand word: "learns" (your candidates: reinforcing / learning / adapting). Lives in the title + two body lines; trivial to swap. -->
 
-# The compounding portfolio
+# The portfolio that learns
 
 *What happens when your PDLC becomes something agents can run.*
 
@@ -20,23 +21,32 @@ down — and no human has time to go collect it before every decision.
 
 So decisions wait. And waiting decisions are the most expensive queue in your company.
 
-## The idea I stole
+## What changed
 
-Kieran Klaassen at Every describes [compound engineering](https://every.to/source-code/my-ai-had-already-fixed-the-code-before-i-saw-it)
-as building systems where each unit of work makes the next one easier: plans live in
-files, agents do the work, learnings get captured where the next agent will find them,
-and status is derived from what actually exists rather than what someone typed into a
-tracker.
+The portfolio operating systems I build with clients were always designed around
+evidence over ceremony. Initiatives move through a product-oriented lifecycle — Explore →
+Discovery → Plan/Commit → Execute → Rollout → BAU — as confidence grows. "Common
+language, not gates" is the operating principle. Steer on outcome hypotheses and leading
+indicators, hunt watermelons, learn before you burn.
 
-Engineers get to work this way now. I kept thinking: portfolio leaders need exactly this,
-one level up. The lifecycle I've built with enterprise product organizations — a
-product-oriented PDLC where initiatives move Explore → Discovery → Plan/Commit → Execute
-→ Rollout → BAU as confidence grows — was always designed around evidence over ceremony.
-"Common language, not gates" was the operating principle. But keeping it honest took a
-facilitator (often me) walking the board, sniffing initiatives, chasing stale statuses,
-prepping decision briefs.
+Keeping that honest has always taken a facilitator. Someone walking the board, sniffing
+initiatives, chasing stale statuses, prepping the decision briefs. Often me. The
+thinking is leveraged; the legwork never was.
 
-That work is real. It's also exactly the kind of work agents are now good at.
+Two things changed at once. Coding agents got good enough to do that legwork. And the
+delivery world converged on spec-driven development: specs, plans, and status living in
+plain files that agents work against, with state derived from what actually exists
+instead of what someone typed into a tracker. There are several flavors of SDD out
+there — [compound engineering](https://every.to/source-code/my-ai-had-already-fixed-the-code-before-i-saw-it)
+is one I like for a specific attribute, the discipline that each unit of work should
+leave the system easier to work in than it found it.
+
+A portfolio deserves that attribute more than a codebase does. Most portfolio processes
+have the opposite property: every review adds weight, every incident adds a gate, and
+five years in you're maintaining the process instead of the portfolio.
+
+So I rebuilt my portfolio operating system as something agents can run. Files, not
+decks. Loops, not ceremonies. A portfolio that learns.
 
 ## The portfolio as files
 
@@ -61,7 +71,7 @@ you can rely on, what's still open, what would make us say no — and stops. Inv
 commit, pivot, kill: those calls stay human. The agent's job is making sure they're made
 on evidence, on time.
 
-**Compound.** Upgrade the cards themselves. Rewrite "Implement enterprise SSO" into an
+**Strengthen.** Upgrade the cards themselves. Rewrite "Implement enterprise SSO" into an
 outcome someone could steer by. Replace activity counters with leading indicators that
 give feedback in weeks and plausibly correlate to the outcome. Tag every confident claim
 as evidence or opinion, and put the opinions at the top of the discovery agenda.
@@ -88,7 +98,11 @@ outranks starting.
 Improvement bets don't get implemented when someone has a clever idea in a review. They
 get captured as cards — benefit hypothesis, leading indicators, success criteria, kill
 criteria — and they ride the same lifecycle as everything else. The operating model is a
-product. Its discovery stage has a tool the initiatives don't need: simulation.
+product. That's what I mean by a portfolio that learns: cards get sharper, learnings
+land where the next cycle will find them, and the process improves through its own
+backlog instead of through review-by-review accretion.
+
+Its discovery stage even has a tool the initiatives don't need: simulation.
 
 The repo ships a small Monte Carlo simulator that learns stage durations from your own
 flow history and runs what-ifs. In the bundled example portfolio, there's a bet that

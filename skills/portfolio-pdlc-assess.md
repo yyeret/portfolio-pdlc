@@ -14,7 +14,7 @@ An evidence-verified read of the whole portfolio: corrected stages, an
 outcome-vs-activity classification per card, flow and risk-balance findings, and a ranked
 list of candidate moves — packaged as a review brief a sponsor can decide from. Assessment
 changes `orientation` fields and fixes contract violations; it never advances stages or
-rewrites cards (that's advance/compound work on later cycles).
+rewrites cards (that's advance/strengthen work on later cycles).
 
 ## Modes
 

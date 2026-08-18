@@ -59,7 +59,7 @@ existing workflow/stage language the org already uses.
 - Map, don't invent: every card traces to source material or a named human statement.
   Fabricated detail poisons every later assess.
 - Don't fix while wiring. Activity-framed titles, missing hypotheses, stale stages — record
-  them as they are; improving cards is `portfolio-pdlc-compound`'s job on later cycles.
+  them as they are; improving cards is `portfolio-pdlc-strengthen`'s job on later cycles.
 - Tiering is a proposal until a sponsor confirms it; say so in the wiring brief.
 - A busy first board is information, not failure — the minibook's three causes (too much in
   flight / over-centralized / factions) go in the brief as hypotheses, not accusations.
