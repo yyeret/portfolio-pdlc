@@ -82,6 +82,29 @@ files and runs `python3`. Harness pointers: `CLAUDE.md`, `GEMINI.md`, `AGENTS.md
    as bets with kill criteria, derisked (probe, pilot, or simulation), and only then
    adopted. The portfolio manages its own improvement on its own board.
 
+## Where this comes from
+
+I'm [Yuval Yeret](https://yuvalyeret.com). I help scale-ups and enterprises get traction on
+the investments that matter — usually at the portfolio level, where the gap between the
+operating model on paper and the one people work in every day does the most damage.
+
+This framework has a lineage. It started as the portfolio agility approach I wrote up in
+[Scaling Product Orgs with Portfolio Agility](https://yuvalyeret.com/blog/scaling-product-organizations-with-portfolio-agility/) —
+behaviors first, minimum viable process second. It got sharper through building
+portfolio operating systems inside large product organizations: a real lifecycle, a real
+Tier-1 board, real investment decisions, and the diagnostic habits (sniff tests,
+watermelon hunts, evidence over opinion) that keep those decisions honest. Keeping it
+honest always took a facilitator walking the board every week. This repo is what happened
+when I handed that legwork to agents and kept the decisions with the humans. The story is
+in [docs/the-ai-native-portfolio.md](docs/the-ai-native-portfolio.md).
+
+It's open on purpose. Take it, fork it, make the lifecycle yours — that's the point of a
+definition of workflow you own. If you're standing this up on a live portfolio and want a
+thinking partner for the parts that are organizational rather than technical — altitude,
+decision rights, descaling the dependency mess, getting leaders to steer on evidence — I
+do that work: [yuvalyeret.com/contact](https://yuvalyeret.com/contact/). And if you run it
+somewhere interesting, I'd genuinely like to hear what the first generated board told you.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).

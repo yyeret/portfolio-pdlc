@@ -5,7 +5,7 @@
 
 *Agents do the legwork, humans keep the decisions, and the portfolio learns every cycle.*
 
-By Yuval Yeret
+By Yuval Yeret · the framework: [github.com/yyeret/portfolio-pdlc](https://github.com/yyeret/portfolio-pdlc)
 
 Picture the monthly portfolio review. Forty slides. Every initiative green. And everyone
 in the room knows that slide 23 — the big platform bet — has been green for five months
