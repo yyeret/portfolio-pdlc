@@ -9,7 +9,7 @@ metrics, decision briefs for the calls only humans should make, and an improveme
 where the operating model itself gets treated as a product — with Monte Carlo simulation
 as its discovery tool.
 
-Alongside it, **flow-harness**: the same thinking one altitude down, for a single value
+Alongside it, **flow-driven**: the same thinking one altitude down, for a single value
 stream. Take any workflow — a PDLC, an SDLC, a content pipeline, an AI use-case pipeline, a
 support queue — and engineer it into an agentic loop with an explicit definition of
 workflow, evidence-based exits, a delegate model and run model per step, and a meta-loop
@@ -36,19 +36,19 @@ run it. The thinking behind it: [Scaling Product Orgs with Portfolio Agility](ht
 | `skills/lean-product-canvas-coach.md` | Coach an initiative from fuzzy ambition to testable hypotheses |
 | `skills/portfolio-pdlc/scripts/` | `portfolio_board.py` (board/metrics/flow-log) and `portfolio_sim.py` (simulation) — python3 stdlib, no dependencies |
 | `skills/portfolio-pdlc/example/fiy-portfolio/` | A fictional scale-up portfolio with deliberately seeded smells to practice on |
-| `skills/flow-harness.md` | Agentic loop engineering for one value stream: workspace contract, run loop, leverage table |
-| `skills/flow-harness-choose.md` | Find the operational and development value streams; pick the one to make agentic first |
-| `skills/flow-harness-define.md` | Discover the workflow by interview, derive one from first principles, or adapt an existing one — unit of value, steps, graph, exit evidence, delegate + run model per step, policies |
-| `skills/flow-harness-ingest.md` | Absorb spec-kit, Kiro, a bespoke harness, or a tracker — wrap, don't rewrite |
-| `skills/flow-harness-scaffold.md` | Turn the definition into a working markdown workspace with real stubs |
-| `skills/flow-harness-instrument.md` | What to measure, wired into the steps that feed it |
-| `skills/flow-harness-integrate.md` | Bind it to GitHub, a Kanban tool, or a dashboard — one writer per field |
-| `skills/flow-harness-run.md` | Advance the flow: one move per cycle, under the step's contract |
-| `skills/flow-harness-evolve.md` | The meta-loop: probe the loop itself, capture bets, change nothing on the spot |
-| `skills/flow-harness/references/` | The POV: loop engineering, the interview protocol + archetype matching, why-work-this-way, the unit of value, delegation ladder, measurement, integrations, scale patterns, ingest recipes, evolution path, loop probes |
-| `skills/flow-harness/scripts/` | `flow_lint.py`, `flow_board.py`, `flow_next.py` (+ shared `flow_defs.py`) — python3 stdlib |
-| `skills/flow-harness/example/fiy-content-engine/` | The same fictional company's content stream, wired as a flow workspace |
-| `docs/specs/agentic-flow-harness.md` | The requirement-level spec for the flow-harness meta-framework |
+| `skills/flow-driven.md` | Agentic loop engineering for one value stream: workspace contract, run loop, leverage table |
+| `skills/flow-driven-choose.md` | Find the operational and development value streams; pick the one to make agentic first |
+| `skills/flow-driven-define.md` | Discover the workflow by interview, derive one from first principles, or adapt an existing one — unit of value, steps, graph, exit evidence, delegate + run model per step, policies |
+| `skills/flow-driven-ingest.md` | Absorb spec-kit, Kiro, a bespoke harness, or a tracker — wrap, don't rewrite |
+| `skills/flow-driven-scaffold.md` | Turn the definition into a working markdown workspace with real stubs |
+| `skills/flow-driven-instrument.md` | What to measure, wired into the steps that feed it |
+| `skills/flow-driven-integrate.md` | Bind it to GitHub, a Kanban tool, or a dashboard — one writer per field |
+| `skills/flow-driven-run.md` | Advance the flow: one move per cycle, under the step's contract |
+| `skills/flow-driven-evolve.md` | The meta-loop: probe the loop itself, capture bets, change nothing on the spot |
+| `skills/flow-driven/references/` | The POV: loop engineering, the interview protocol + archetype matching, why-work-this-way, the unit of value, delegation ladder, measurement, integrations, scale patterns, ingest recipes, evolution path, loop probes |
+| `skills/flow-driven/scripts/` | `flow_lint.py`, `flow_board.py`, `flow_next.py` (+ shared `flow_defs.py`) — python3 stdlib |
+| `skills/flow-driven/example/fiy-content-engine/` | The same fictional company's content stream, wired as a flow workspace |
+| `docs/specs/flow-driven.md` | The requirement-level spec for the flow-driven meta-framework |
 
 ## Quickstart (five minutes, no setup)
 
@@ -77,7 +77,7 @@ python3 ../../scripts/portfolio_sim.py . --scenario reviews/scenarios/extract-bi
 ## Quickstart: any workflow as an agentic loop
 
 ```bash
-cd portfolio-pdlc/skills/flow-harness/example/fiy-content-engine
+cd portfolio-pdlc/skills/flow-driven/example/fiy-content-engine
 python3 ../../scripts/flow_lint.py  . --today 2026-08-19   # is the workflow definition sound?
 python3 ../../scripts/flow_board.py . --today 2026-08-19   # project it
 python3 ../../scripts/flow_next.py  . --today 2026-08-19   # what is the ONE next move?
@@ -91,10 +91,10 @@ prepare decisions and humans make them.
 
 Then point your agent at a workflow of your own:
 
-> Load `skills/flow-harness-define.md` and help me define the workflow for <stream>.
+> Load `skills/flow-driven-define.md` and help me define the workflow for <stream>.
 
 Already have spec-kit, Kiro, a homegrown harness, or a tracker full of states? Start with
-`skills/flow-harness-ingest.md` — it maps what exists before proposing anything.
+`skills/flow-driven-ingest.md` — it maps what exists before proposing anything.
 
 ## Wiring a real portfolio
 
@@ -123,7 +123,7 @@ files and runs `python3`. Harness pointers: `CLAUDE.md`, `GEMINI.md`, `AGENTS.md
    as bets with kill criteria, derisked (probe, pilot, or simulation), and only then
    adopted. The portfolio manages its own improvement on its own board.
 
-And in `flow-harness`, three more that fall out of running a stream rather than a portfolio:
+And in `flow-driven`, three more that fall out of running a stream rather than a portfolio:
 
 5. **Delegation is per step and per evidence.** A six-rung ladder from "human only" to
    "closed-loop automation", set by reversibility and blast radius — never by how impressive

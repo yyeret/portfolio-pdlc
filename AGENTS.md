@@ -9,21 +9,21 @@ Two families live here:
 
 - **`portfolio-pdlc`** — a portfolio-level product development lifecycle: significant
   investments, evidence-verified stages, human investment decisions.
-- **`flow-harness`** — agentic loop engineering for any single value stream (PDLC, SDLC,
+- **`flow-driven`** — agentic loop engineering for any single value stream (PDLC, SDLC,
   content pipeline, AI use cases, operational request streams): definition of workflow,
   per-step delegate and run models, evidence exits, orchestration, and a meta-loop.
 
 ## How to work here
 
 1. **Entry point**: read `skills/portfolio-pdlc.md` for portfolio work, or
-   `skills/flow-harness.md` for a single value stream — each carries its operating loop,
+   `skills/flow-driven.md` for a single value stream — each carries its operating loop,
    its leverage table, and the routing to member skills. Load member skills
    (`skills/<name>.md`) only when the loop routes you there; each references companion
    material in `skills/<name>/` (load only what you need).
 2. **State lives in card frontmatter.** `board.md` and `flow-log.csv` inside a workspace
    are generated projections — regenerate them with
    `skills/portfolio-pdlc/scripts/portfolio_board.py` (portfolio) or
-   `skills/flow-harness/scripts/flow_board.py` (flow), never hand-edit.
+   `skills/flow-driven/scripts/flow_board.py` (flow), never hand-edit.
 3. **Humans keep the decisions**: invest, commit, pivot, kill, reorganize. You prepare
    decision briefs; a dated Decision-log entry naming a human is required before any card
    crosses a decision boundary.
@@ -39,9 +39,9 @@ Two families live here:
 deliberately seeded smells (see its README). Run the loop there before wiring a real
 portfolio with `skills/portfolio-pdlc-wire.md`.
 
-`skills/flow-harness/example/fiy-content-engine/` is the same fictional company's content
+`skills/flow-driven/example/fiy-content-engine/` is the same fictional company's content
 value stream, wired as a flow workspace with its own seeded smells. Run cycles there before
-defining a real stream with `skills/flow-harness-define.md`.
+defining a real stream with `skills/flow-driven-define.md`.
 
 ## Conventions
 
@@ -56,7 +56,7 @@ defining a real stream with `skills/flow-harness-define.md`.
 
 ## Specs
 
-`docs/specs/agentic-flow-harness.md` is the requirement-level spec for the flow-harness
+`docs/specs/flow-driven.md` is the requirement-level spec for the flow-driven
 meta-framework — the thing to be extracted from this repo later, of which `portfolio-pdlc`
-is one instance. Keep it in step with what `skills/flow-harness*` actually does; requirement
+is one instance. Keep it in step with what `skills/flow-driven*` actually does; requirement
 ids (`R1`…`R24`) are stable and referenced by the extraction plan.
