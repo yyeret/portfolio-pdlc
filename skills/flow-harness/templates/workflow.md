@@ -11,6 +11,19 @@ a set of gates** — work moves on evidence and capacity, not on ceremony.
 - **Trigger**: <what makes an item exist>
 - **Definition of "in this stream"**: <what belongs here, and what deliberately does not>
 
+## The unit of value
+
+**One item is**: <what a single unit of work is, named as an outcome rather than an artefact>
+
+**Finishing one means**: <what changes, and for whom — the thing someone outside this stream
+would notice>
+
+Sanity-check it against the five tests in `unit-of-value.md`: finishing one produces value
+someone outside notices · it can actually finish · its identity survives the whole graph ·
+you can hold several in your head · counting them says something true. If the unit is an
+artefact ("the report") or a task ("write section 2"), fix that here before anything else —
+every step, limit, and measure below inherits whatever confusion is in this section.
+
 ## Flow boundaries
 
 - **Start**: <the moment an item becomes ours to track — request received? idea captured?>
@@ -99,6 +112,8 @@ typo should trace back to an improvement card in `improvements/`.
 <!-- flow-config
 id: <stream-id>
 kind: <development | operational | content | ai-use-case | custom>
+unit: <what one item is — required>
+unit_outcome: <what changes, and for whom, when one finishes>
 steps: <step-a>, <step-b>, <step-c>
 optional_steps:
 entry: <step-a>

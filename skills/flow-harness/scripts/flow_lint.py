@@ -29,6 +29,12 @@ def lint_graph(cfg, steps):
     terminal = set(cfg["terminal"])
     if not cfg["steps"]:
         v.append("flow-config declares no `steps`")
+    if not cfg["unit"]:
+        v.append("flow-config declares no `unit` — nobody has said what one item is, so nothing else "
+                 "in the definition can be checked against it (see references/unit-of-value.md)")
+    if not cfg["unit_outcome"]:
+        w.append("flow-config declares no `unit_outcome` — say what changes, and for whom, when one "
+                 "item finishes; a unit with no stated change legitimises activity-shaped work")
     if not cfg["entry"]:
         v.append("flow-config declares no `entry`")
     elif cfg["entry"] not in declared:

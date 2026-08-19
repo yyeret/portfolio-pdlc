@@ -4,6 +4,7 @@
 
 ## Summary
 
+- Unit of value: **one published piece carrying one idea, from question to measured outcome** → _a studio owner changes one operating decision, and we can see they did_
 - Items in flow: **8** across 8 steps (WIP limits: draft=2, edit=2, publish=1)
 - **WIP over limit**: `draft` at 3 / 2 — finish before starting
 - Held by: agent: 2, blocked: 1, human: 3, pair: 1, waiting-decision: 1

@@ -45,6 +45,8 @@ guessed graph is worse than no graph.
 <!-- flow-config
 id: fiy-content-engine
 kind: content                 # development | operational | content | ai-use-case | custom
+unit: one published piece carrying one idea, from question to measured outcome
+unit_outcome: a studio owner changes one operating decision, and we can see they did
 steps: intake, research, angle-test, draft, edit, publish, amplify, learn
 optional_steps: angle-test, amplify
 entry: intake
@@ -75,6 +77,8 @@ cadence: daily loop, weekly meta-loop
 |---|---|
 | `id` | Stable identifier for this stream; used by exports and cross-stream rollups. |
 | `kind` | Archetype — routes to a starting point in `workflow-archetypes.md`. Free text is fine. |
+| `unit` | **What one item is.** Required: a definition that cannot say what flows cannot be checked against anything. Name it as an outcome, not an artefact — see `unit-of-value.md`. |
+| `unit_outcome` | What changes, and for whom, when one item finishes. Missing is a warning: a unit with no stated change is how activity-shaped work gets legitimised. |
 | `steps` | Every step id, in **narrative order**. Order is presentation and rework detection only; the edges are the truth. |
 | `optional_steps` | Steps that may be skipped — but skipping is a *decision*, recorded on the item, never a default. |
 | `entry` | Where new items land. |

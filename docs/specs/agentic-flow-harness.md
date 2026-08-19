@@ -51,7 +51,8 @@ integrating it with the system of record · evolving it · the delegation and pl
 | Entity | Definition | Key relationships |
 |---|---|---|
 | **Stream** | one value stream run as a loop | has one Workflow, many Items, one Platform |
-| **Workflow** | the definition: graph + policies + cadences | has Steps, Edges, terminal States |
+| **Workflow** | the definition: graph + policies + cadences | has a UnitOfValue, Steps, Edges, terminal States |
+| **UnitOfValue** | what one Item *is*, named as an outcome rather than an artefact | declared on the Workflow; every Step, limit, and Measure is defined relative to it |
 | **Step** | a node with a contract | has ExitEvidence, DelegateModel, RunModel, Measures, optional InnerGraph |
 | **Edge** | a permitted transition, optionally conditional or rework | connects Steps and terminal States |
 | **InnerGraph** | a bounded mini-graph private to a Step | has Nodes, a stop rule; never holds Items |
@@ -76,6 +77,7 @@ integrating it with the system of record · evolving it · the delegation and pl
 5. Every inner loop is bounded.
 6. The verifier is not the doer.
 7. Changes to the Workflow are Bets with kill criteria, not edits.
+8. The UnitOfValue is declared, and stated as a change for someone rather than an artefact.
 
 ## 4. Requirements
 
@@ -89,8 +91,10 @@ operational request stream without special-casing any of them.
 
 - **Accept**: the same schema, scripts, and loop run all five archetypes; archetypes are
   *starting points* (steps, exits, rungs, measures, failure modes), never fixed templates;
-  `kind:` is a hint, not a constraint.
-- **Realised**: `references/workflow-archetypes.md`; `flow-config.kind`.
+  `kind:` is a hint, not a constraint; adapting to a stream is primarily a **discovery**
+  activity (R25), with archetype selection as an optional shortcut and "custom" a
+  first-class outcome.
+- **Realised**: `references/workflow-archetypes.md`; `flow-config.kind`; R25.
 
 ### R2 — Guides choosing which workflow to make agentic
 
@@ -105,8 +109,10 @@ Identify operational and development value streams and choose one, on evidence.
 
 Produce a definition of workflow the team recognises as theirs.
 
-- **Accept**: an eight-move systems read produces steps, graph, exits, policies, classes of
-  service, WIP limits, cadences, delegation stance; output is machine-readable and lintable;
+- **Accept**: three explicit entry paths — **Adapt** (an artefact exists), **Discover** (an
+  unwritten workflow exists, R25), **Derive** (nothing exists, R26) — and a nine-move systems
+  read producing the unit of value (R27), steps, graph, exits, policies, classes of service,
+  WIP limits, cadences, and the delegation stance; output is machine-readable and lintable;
   the first version describes what exists rather than proposing what should.
 - **Realised**: `flow-harness-define`, `templates/workflow.md`, `references/workflow-definition.md`.
 
@@ -221,10 +227,10 @@ GitHub, Jira/Linear, an internal Kanban dashboard, a spreadsheet, chat.
 
 ### R16 — A systems read inspired by, not copied from, the Kanban Method
 
-- **Accept**: an original eight-move start-up sequence covering dissatisfaction, demand,
-  capability and constraint, the graph, exits, delegation and run models, policies and
-  cadences, measures and system of record; credits its inspiration; adds what STATIK never
-  had to address — delegation, evidence, and context.
+- **Accept**: an original nine-move start-up sequence covering dissatisfaction, the unit of
+  value, demand, capability and constraint, the graph, exits, delegation and run models,
+  policies and cadences, measures and system of record; credits its inspiration; adds what
+  STATIK never had to address — the agentic unit question, delegation, evidence, and context.
 - **Realised**: `flow-harness-define` § The Systems Read.
 
 ### R17 — Assumes complex knowledge work: evidence-based steering, discovery-first
@@ -253,6 +259,47 @@ GitHub, Jira/Linear, an internal Kanban dashboard, a spreadsheet, chat.
 - **Realised**: `platform/` in the contract, `templates/context-pack.md`,
   `references/evolution-path.md` § the platform play, the example's `learn` → `audience-map` loop.
 
+### R25 — Discovery by interview, with archetype matching
+
+Adapting to a workflow must begin by *finding* it, not by offering a menu.
+
+- **Accept**: an interview protocol anchored to the last real item rather than to "the
+  process"; a question ladder that yields the unit, boundaries, queues, back-edges, decision
+  points, context packs, classes of service, and failure modes; listening rules (passive
+  voice, "usually", the nag, waiting described as working); rules for turning a transcript
+  into a draft graph with per-element provenance (observed / stated / inferred); archetype
+  matching on **failure mode and evidence shape**, with three outcomes — propose an
+  archetype, split into two streams, or go custom — always presented as a proposal with an
+  alternative; agent-led mode produces a draft plus the five questions that would most change
+  it; a written discovery record that preserves unresolved disagreements verbatim.
+- **Realised**: `references/discovery-interview.md`, `flow-harness-define` (Discover path).
+
+### R26 — First-principles derivation when no workflow exists
+
+When nothing formal exists, the framework must teach *why* work this way before *how*.
+
+- **Accept**: a derivation that starts from who is worse off if the stream stops; steps
+  derived by asking what has to become **true** (a step retires a distinct kind of doubt),
+  not by naming activities; a rationale table giving each mechanism its claim, the cost of
+  omitting it, and its smallest starting version; the common objections answered honestly
+  ("this is bureaucracy", "our work is too creative", "we already know how we work", "the
+  agent can figure it out"); an explicit "when not to formalise"; and a smallest honest
+  starting workflow that runs immediately and grows only on evidence.
+- **Realised**: `references/first-principles.md`, `flow-harness-define` (Derive path).
+
+### R27 — An explicit, outcome-oriented unit of value
+
+The framework must force a decision about what flows, and push it toward an outcome.
+
+- **Accept**: `unit` declared in the machine-readable config, with a **missing unit as a lint
+  violation**, and `unit_outcome` (what changes, for whom) as a warning; five tests for a
+  good unit; a catalogue of wrong units (task, artefact, batch, ticket, ceremony, person's
+  work, project) each with its board-level tell; right-sizing guidance tied to the loop
+  cadence, with rollups for containers; per-item outcome hypotheses flagged when missing; and
+  changing the unit treated as a redefinition with a new baseline, not an edit.
+- **Realised**: `references/unit-of-value.md`, `flow-config.unit` / `unit_outcome`,
+  `flow_lint.py`, the board summary line, `templates/workflow.md`.
+
 ### Cross-cutting requirements
 
 | Id | Requirement | Accept |
@@ -267,8 +314,9 @@ GitHub, Jira/Linear, an internal Kanban dashboard, a spreadsheet, chat.
 
 These are the interfaces the meta-framework must publish and version:
 
-1. **`flow-config`** — the workflow graph island (steps, edges, entry, terminal, limits,
-   thresholds, decision points, evidence exits).
+1. **`flow-config`** — the workflow island: the unit of value (`unit`, `unit_outcome`) plus
+   the graph (steps, edges, entry, terminal, limits, thresholds, decision points, evidence
+   exits).
 2. **Step frontmatter** — id, name, type, intent, delegate rung, run model + ref, context
    packs, inputs, exit evidence, verify, escalation, budget, measures, inner graph.
 3. **`step-graph`** — inner graph island with a mandatory stop rule.
@@ -349,3 +397,6 @@ a portfolio workspace's history survives the migration.
 - Someone reverts a rung promotion using the demotion criteria, without an argument.
 - A user reads the definition of workflow and says "that is what we actually do" — and then
   changes one thing in it.
+- A team can state their unit of value in one sentence, and it is a change for somebody
+  rather than an artefact they produce.
+- A stream with no prior process can explain, unprompted, why it has exit evidence at all.
