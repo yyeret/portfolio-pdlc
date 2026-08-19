@@ -38,13 +38,14 @@ run it. The thinking behind it: [Scaling Product Orgs with Portfolio Agility](ht
 | `skills/portfolio-pdlc/example/fiy-portfolio/` | A fictional scale-up portfolio with deliberately seeded smells to practice on |
 | `skills/flow-harness.md` | Agentic loop engineering for one value stream: workspace contract, run loop, leverage table |
 | `skills/flow-harness-choose.md` | Find the operational and development value streams; pick the one to make agentic first |
-| `skills/flow-harness-define.md` | The systems read: steps, graph, exit evidence, delegate + run model per step, policies |
+| `skills/flow-harness-define.md` | Discover the workflow by interview, derive one from first principles, or adapt an existing one — unit of value, steps, graph, exit evidence, delegate + run model per step, policies |
 | `skills/flow-harness-ingest.md` | Absorb spec-kit, Kiro, a bespoke harness, or a tracker — wrap, don't rewrite |
 | `skills/flow-harness-scaffold.md` | Turn the definition into a working markdown workspace with real stubs |
 | `skills/flow-harness-instrument.md` | What to measure, wired into the steps that feed it |
 | `skills/flow-harness-integrate.md` | Bind it to GitHub, a Kanban tool, or a dashboard — one writer per field |
 | `skills/flow-harness-run.md` | Advance the flow: one move per cycle, under the step's contract |
 | `skills/flow-harness-evolve.md` | The meta-loop: probe the loop itself, capture bets, change nothing on the spot |
+| `skills/flow-harness/references/` | The POV: loop engineering, the interview protocol + archetype matching, why-work-this-way, the unit of value, delegation ladder, measurement, integrations, scale patterns, ingest recipes, evolution path, loop probes |
 | `skills/flow-harness/scripts/` | `flow_lint.py`, `flow_board.py`, `flow_next.py` (+ shared `flow_defs.py`) — python3 stdlib |
 | `skills/flow-harness/example/fiy-content-engine/` | The same fictional company's content stream, wired as a flow workspace |
 | `docs/specs/agentic-flow-harness.md` | The requirement-level spec for the flow-harness meta-framework |

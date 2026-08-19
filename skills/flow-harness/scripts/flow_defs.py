@@ -142,7 +142,8 @@ def load_config(ws):
     if block is None:
         return None, ["workflow.md has no <!-- flow-config --> block — the graph is not machine-readable"]
     cfg = {
-        "id": "", "kind": "", "steps": [], "optional_steps": [], "entry": "", "terminal": [],
+        "id": "", "kind": "", "unit": "", "unit_outcome": "",
+        "steps": [], "optional_steps": [], "entry": "", "terminal": [],
         "edges": parse_edges(block), "wip_limits": {}, "aging_thresholds": {},
         "decision_points": [], "evidence_exits": [], "cadence": "", "change_log": [],
     }
@@ -162,7 +163,7 @@ def load_config(ws):
                         problems.append(f"flow-config {key}: `{pair.strip()}` is not step=<int>")
                     else:
                         cfg[key][k2.strip()] = n
-        elif key in ("id", "kind", "entry", "cadence"):
+        elif key in ("id", "kind", "entry", "cadence", "unit", "unit_outcome"):
             cfg[key] = val
         elif key == "edges":
             continue

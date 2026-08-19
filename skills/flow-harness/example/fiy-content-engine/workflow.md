@@ -18,6 +18,22 @@ when the evidence for the next step exists and the next step has capacity.
 - **In this stream**: anything published under our name to an audience we do not control.
   **Not in this stream**: in-product copy, release notes, and customer-specific decks.
 
+## The unit of value
+
+**One item is**: one published piece carrying one idea, from the question that prompted it
+through to a readout against its hypothesis.
+
+**Finishing one means**: a studio owner changes one operating decision — and we can see they
+did, in what they reply, forward, or ask us next.
+
+We got this wrong for a year. The unit used to be "a blog post", which finished when a URL
+existed; the calendar was full and nothing changed for anyone. Naming the unit as the change
+rather than the artefact is what made `learn` a step instead of an afterthought, and what
+makes `dropped` a respectable place for a piece to end up.
+
+A series is not a unit — it is a `rollup` whose children are units. See
+`instructor-retention-series`.
+
 ## Flow boundaries
 
 - **Start**: when a candidate piece gets an item card — i.e. when someone commits to
@@ -116,6 +132,8 @@ earliest honest signal that the draft step is producing fluent nonsense.
 <!-- flow-config
 id: fiy-content-engine
 kind: content
+unit: one published piece carrying one idea, from question to measured outcome
+unit_outcome: a studio owner changes one operating decision, and we can see they did
 steps: intake, research, angle-test, draft, edit, publish, amplify, learn
 optional_steps: angle-test, amplify
 entry: intake

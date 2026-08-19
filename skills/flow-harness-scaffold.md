@@ -26,8 +26,9 @@ one. Plus: where the work lives today, who owns the stream, and any items curren
    `workflow.md`, `steps/<id>.md` per step, `measures.md`, `integrations.md`, `AGENTS.md`,
    and the directories `items/`, `platform/{context,prompts,checks}/`, `improvements/`,
    `learnings/`, `reviews/`.
-2. **Write the `flow-config` block first** and lint it before writing any prose. A graph that
-   does not validate makes every downstream file a guess.
+2. **Write the `flow-config` block first** — including `unit` and `unit_outcome` — and lint
+   it before writing any prose. A graph that does not validate makes every downstream file a
+   guess, and a workspace with no stated unit cannot be checked against anything.
 3. **Fill every step contract with a real starting point**, not a placeholder:
    - exit evidence drafted from what already convinces the person who checks that step today;
    - a rung with its reason, defaulting to what people do *now* rather than to the ambition;
@@ -66,6 +67,7 @@ one. Plus: where the work lives today, who owns the stream, and any items curren
 ## Quality Gates
 
 - `flow_lint.py`: zero violations; every remaining warning is deliberate and named in the brief.
+- `unit` and `unit_outcome` are stated, and the items carded actually match that unit.
 - `flow_next.py` produces a sensible run card on the first run.
 - Every step contract has exit evidence, a rung with a reason, and a run model.
 - Every named context pack and check exists with real starting content.

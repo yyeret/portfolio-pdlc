@@ -42,6 +42,10 @@ Three commitments follow, and everything in this family is downstream of them:
 3. **Delegation is per step and per evidence.** The rung is set by reversibility, blast
    radius, and check quality — never by how impressive the model looks this month.
 
+And one decision precedes all three: **what is the unit of value that flows?** Named as an
+outcome, not an artefact or a task — because the steps are what happens to one, the limits
+count them, and every measure inherits whatever confusion is in the unit.
+
 Full argument: `skills/flow-harness/references/loop-engineering.md`.
 
 ## The Workspace
@@ -50,7 +54,7 @@ Any folder becomes a flow workspace when it follows
 `skills/flow-harness/references/workflow-definition.md`:
 
 ```
-workflow.md        definition of workflow + <!-- flow-config --> graph
+workflow.md        definition of workflow: the unit of value + <!-- flow-config --> graph
 steps/<id>.md      one contract per step: exit evidence, delegate, run, inner graph
 items/<slug>/      the work, one card per item; frontmatter is the state
 measures.md        what we steer on            integrations.md   system-of-record bindings
@@ -65,8 +69,10 @@ python3 <REPO>/skills/flow-harness/scripts/flow_board.py <ws>   # regenerate the
 python3 <REPO>/skills/flow-harness/scripts/flow_next.py  <ws>   # the run card for ONE move
 ```
 
-No workspace yet? Load `flow-harness-choose` (which stream?) then `flow-harness-define`.
-Existing spec-kit / Kiro / bespoke harness / tracker? Load `flow-harness-ingest` first.
+No workspace yet? Load `flow-harness-choose` (which stream?) then `flow-harness-define`,
+which discovers the workflow by interview, derives one from first principles when none
+exists, or adapts an existing artefact. Existing spec-kit / Kiro / bespoke harness /
+tracker? Load `flow-harness-ingest` first.
 
 ## The Run Loop (one cycle)
 
@@ -116,7 +122,9 @@ still open, evidence vs opinion, options with trade-offs, a recommendation — p
 | Situation | Load |
 |---|---|
 | "Which of our workflows should be agentic?" | `flow-harness-choose` |
-| No definition of workflow yet / redefining one | `flow-harness-define` |
+| A workflow exists but nobody has written it down — interview it out | `flow-harness-define` (Discover) |
+| Nobody has worked this way before / "why work this way at all?" | `flow-harness-define` (Derive) |
+| "What actually flows here?" — the unit of value is fuzzy or artefact-shaped | `flow-harness-define` (move 2) |
 | A spec-kit, Kiro, bespoke harness, or tracker already exists | `flow-harness-ingest` |
 | Turn the definition into a working workspace with stubs | `flow-harness-scaffold` |
 | "What should we measure, and where does it live?" | `flow-harness-instrument` |
@@ -152,6 +160,10 @@ still open, evidence vs opinion, options with trade-offs, a recommendation — p
 - `skills/flow-harness/references/loop-engineering.md` — the POV: two loops, ten principles, failure modes.
 - `skills/flow-harness/references/workflow-definition.md` — the contract: layout, flow-config, step/item schema.
 - `skills/flow-harness/references/step-contracts.md` — delegation ladder and run models.
+- `skills/flow-harness/references/discovery-interview.md` — surfacing an unwritten workflow by
+  interview, and matching it to an archetype.
+- `skills/flow-harness/references/first-principles.md` — why work this way, when nothing exists.
+- `skills/flow-harness/references/unit-of-value.md` — choosing and sizing what flows.
 - `skills/flow-harness/references/workflow-archetypes.md` · `value-streams.md` · `measurement.md` ·
   `integration-adapters.md` · `scaled-flow-patterns.md` · `ingest-recipes.md` · `evolution-path.md` ·
   `loop-probes.md`

@@ -41,7 +41,11 @@ actually do the work.
 5. **Recommend one stream and one first move.** Rank the move by yield per unit of risk:
    make it visible → assemble context → draft in a step → automate a check → run a step →
    orchestrate. Starting at "orchestrate" is the standard, expensive mistake.
-6. **Write the choice brief** (`reviews/YYYY-MM-DD-stream-choice.md`): the streams found,
+6. **Name the candidate unit of value** for the chosen stream: what is *one* item, phrased
+   as an outcome rather than an artefact ("a customer's problem resolved", not "a ticket").
+   Expect `flow-harness-define` to sharpen it — but if nobody can attempt a sentence here,
+   that is itself the finding, and it usually means the stream is a department.
+7. **Write the choice brief** (`reviews/YYYY-MM-DD-stream-choice.md`): the streams found,
    the scores with reasoning, the recommendation, what the first month looks like, what you
    deliberately are not doing yet, and the one thing that would change the recommendation.
 
@@ -70,4 +74,6 @@ actually do the work.
   table, the anti-patterns.
 - `skills/flow-harness/references/workflow-archetypes.md` — what the chosen stream will
   probably look like.
-- Next: `flow-harness-define` (or `flow-harness-ingest` if a workflow artefact already exists).
+- `skills/flow-harness/references/unit-of-value.md` — the five tests for the candidate unit.
+- Next: `flow-harness-define` — it discovers the workflow by interview, derives one from
+  first principles when none exists, or adapts what `flow-harness-ingest` already mapped.

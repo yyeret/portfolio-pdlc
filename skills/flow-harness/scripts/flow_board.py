@@ -151,6 +151,9 @@ def render(data, expand, metrics):
     flagged = [i for i in data["items"] if i["flags"]]
     overdue = [i for i in data["items"] if any(f.startswith("decision overdue") for f in i["flags"])]
     lines += ["## Summary", ""]
+    if cfg["unit"]:
+        lines.append(f"- Unit of value: **{cfg['unit']}**"
+                     + (f" → _{cfg['unit_outcome']}_" if cfg["unit_outcome"] else ""))
     limits = ", ".join(f"{k}={v}" for k, v in cfg["wip_limits"].items()) or "none declared"
     lines.append(f"- Items in flow: **{len(flowing)}** across {len(cfg['steps'])} steps (WIP limits: {limits})")
     over = [(sid, metrics["wip"][sid], cfg["wip_limits"][sid])
