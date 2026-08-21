@@ -71,4 +71,4 @@ escalation list is the `escalate_when`. The verifier is never the doer.
 `docs/specs/flow-driven.md` is the requirement-level spec for the flow-driven
 meta-framework — the thing to be extracted from this repo later, of which `portfolio-pdlc`
 is one instance. Keep it in step with what `skills/flow-driven*` actually does; requirement
-ids (`R1`…`R24`) are stable and referenced by the extraction plan.
+ids (`R1`…`R27`) are stable and referenced by the extraction plan.

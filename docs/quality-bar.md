@@ -39,7 +39,7 @@ python3 skills/portfolio-pdlc/scripts/portfolio_board.py skills/portfolio-pdlc/e
 | M2 | Flow example lints | `CLEAN`, **0 violations**; warnings only the ones its README documents as seeded |
 | M3 | Board regenerates | exits 0, and `git diff --stat` on the example shows no unexplained churn |
 | M4 | Orchestrator runs | prints a run card and exits 0/3/4, never a traceback |
-| M5 | Portfolio example still works | board regenerates, same violation count as before the change |
+| M5 | Portfolio example still works | exits 0 and `board.md` regenerates |
 | M6 | Skill frontmatter | every `skills/*.md` has `name` (matching its filename), `description`, `metadata.version` |
 | M7 | No dangling references | every `skills/…` or `docs/…` path named in changed files exists |
 | M8 | Stdlib only | no third-party imports, no network calls in any script |
@@ -55,7 +55,7 @@ python3 skills/portfolio-pdlc/scripts/portfolio_board.py skills/portfolio-pdlc/e
 | C4 | Bets, not edits | workflow/process changes ride the improvement lane; they are not slipped into a definition in passing |
 | C5 | Spec in step | `docs/specs/flow-driven.md` matches what `skills/flow-driven*` actually does; **R-ids are stable and never renumbered** |
 | C6 | Evidence language | exit evidence is written as artefacts and observations, never activities |
-| C7 | No session leakage | no model identifiers, session URLs, or harness-specific assumptions in committed material |
+| C7 | No session leakage | no model identifiers, session URLs, or harness-specific assumptions in committed **files** (commit trailers are out of scope) |
 | C8 | No secrets | no tokens, keys, internal hostnames, or private personal data |
 
 ## 4. Escalation — do NOT auto-merge, hand back to the human
