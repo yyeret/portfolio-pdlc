@@ -1,7 +1,7 @@
 ---
 title: A blocking finding gets fixed and re-reviewed instead of spending a human
 type: improvement-process
-stage: probing
+stage: watching
 owner: Yuval
 opened: 2026-08-21
 benefit_hypothesis: "If blocking findings are fixed and re-reviewed automatically up to twice, humans are spent only on judgement calls — because most first-round blocks are defects the author can fix in minutes, not decisions anyone needs to make"
@@ -47,22 +47,28 @@ when it should not.
 ## Probe result — PR #3, all three rounds
 
 The loop ran its full bound on the change that introduces it and **ended in a hand-back**,
-not a merge. Three rounds, three BLOCKs, one blocking finding each:
+not a merge. Three rounds, three BLOCKs, four blocking findings:
 
 | Round | Finding | Fix |
 |---|---|---|
-| 1 | §6 sent §4.1 — a failed check — straight to a human, defeating the loop it was introducing | `f2e9f1e`, one paragraph + two lines |
-| 2 | that fix reached `docs/quality-bar.md` and not `AGENTS.md`, the file every session loads | `90b39e4`, one sentence |
-| 3 | the bar's opening paragraph still states the single-pass rule the change replaces | not applied — the loop had ended |
+| 1 | §6 sent §4.1 — a failed check — straight to a human, defeating the loop it was introducing | `db5db77`, one paragraph + two lines |
+| 1 | the pseudocode dispatched `PASS -> merge` before the escalation branch, inverting §4's stated precedence | `db5db77`, one line moved |
+| 2 | that fix reached `docs/quality-bar.md` and not `AGENTS.md`, the file every session loads | `367d03f`, one sentence |
+| 3 | the bar's opening paragraph still states the single-pass rule the change replaces | `06ceb3e`, applied on a human's call after the loop had ended |
 
-Every one was real, and every one was one sentence to fix. A one-shot gate would have
-caught round 1's and shipped the other two.
+Every one was real, and every one was a sentence or a line to fix. A one-shot gate would
+have caught round 1's two and shipped the other two.
 
-**The bound was not the binding constraint — the reviewer's question was.** All three
-findings are the same defect at different sites: this repo states its review disposition in
-five places, and rounds 1 and 2 each fixed the site in front of them without asking where
-else it was written. Round 2 counted the sites and reported four. Round 3 asked the question
-properly, found the fifth, and tripped the convergence guard doing it.
+**The bound was not the binding constraint — the reviewer's question was.** Three of the
+four findings are the same defect at different sites: this repo states its review
+disposition in five places, and rounds 1 and 2 each fixed the site in front of them without
+asking where else it was written. Round 2 counted the sites and reported four. Round 3 asked
+the question properly, found the fifth, and tripped the convergence guard doing it.
+
+The fourth — round 1's precedence inversion — is the counter-example, and it belongs in the
+record: an ordering bug in the new pseudocode, caught on the first read, nothing to do with
+where else anything was written. One finding in four was what a single pass would have been
+enough for.
 
 So the loop spent three rounds on one defect and still did not finish it. That is a finding
 about what the reviewer is asked, not about the number of rounds — and it is the first
@@ -87,9 +93,9 @@ once produced the clean verdict it defines.
 |---|---|---|---|
 | 2026-08-21 | rounds-to-clean | never clean (3 of 3) | ran to the bound; hand-back, not merge |
 | 2026-08-21 | human-round-trips-per-change | 1 | vs. 1 under the one-shot gate — no saving on this change, because the loop never converged |
-| 2026-08-21 | blocking findings that were real | 3 of 3 | none were reviewer noise; each named a file, a line, and a one-sentence fix |
+| 2026-08-21 | blocking findings that were real | 4 of 4 | none were reviewer noise; each named a file, a line, and a fix of a sentence or less |
 | 2026-08-21 | notes-carried | 8 | recorded across three rounds, none fixed, none re-raised as blocking by a later round |
-| 2026-08-21 | merged on | human decision | the loop's own verdict on the change was BLOCK; `1db5c43` applied round 3's fix and `06ceb3e` merged |
+| 2026-08-21 | merged on | human decision | the loop's own verdict on the change was BLOCK; `06ceb3e` carries round 3's fix and is the merge |
 
 ## Decision log
 
