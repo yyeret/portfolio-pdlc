@@ -71,6 +71,11 @@ Any one of these turns a PASS into a hand-back, however good the change is:
    unilaterally.
 6. Anything irreversible or outward-facing that a revert would not actually undo.
 
+Condition 1 is the review loop's own material: a failed check or a blocking convention
+finding routes to a fix round (§6) and reaches a human only by surviving the loop's bound.
+Conditions 2–6 are about what the change *is* rather than a defect in it — no fix round
+resolves them, so they leave for a human the moment they trip.
+
 ## 5. Change integrity
 
 - The commit messages and PR body describe what the diff **does**, not what was intended.
@@ -86,8 +91,8 @@ plausibility rather than truth — the same rule this repo applies to every inne
 ```
 round 1..3:
     verdict = independent review (fresh context, given the diff + every prior round's findings)
+    any of §4.2–§4.6 tripped       -> hand to a human immediately, whatever the round
     PASS / PASS-WITH-NOTES         -> merge, record the rounds, done
-    any §4 escalation condition    -> hand to a human immediately, whatever the round
     BLOCK on round 3               -> hand to a human with what is still open
     BLOCK otherwise                -> fix ONLY the blocking findings, push, next round
 ```
@@ -107,8 +112,11 @@ Rules that keep the loop honest:
    consequence of the previous round's fix — something an earlier round could have caught
    and did not — the reviews have stopped converging. Stop the loop, hand back with
    everything still open, and do not spend the remaining round.
-4. **Escalation short-circuits.** A §4 condition is not fixable by another round. Exit to a
-   human the moment one trips.
+4. **Escalation short-circuits.** §4.2–§4.6 are not fixable by another round — they are
+   about what the change *is*, not a defect in it. Exit to a human the moment one trips.
+   §4.1 is the exception: a failed check or a blocking convention finding is precisely what
+   this loop exists to fix, so it routes to a fix round and reaches a human only by
+   surviving the bound.
 5. **The loop leaves a trace.** Each round is recorded in the PR body: round number,
    verdict, blocking findings, what changed in response. A reader should be able to tell a
    loop that converged from one that gave up.
