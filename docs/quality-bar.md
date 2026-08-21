@@ -2,7 +2,9 @@
 
 Every pull request opened from an agent session in this repo is reviewed against this bar
 by an **independent reviewer** — a fresh context that did not write the change — before it
-merges. A clean verdict merges automatically; anything else goes back to a human.
+merges. Review is a bounded loop (§6): a clean verdict merges automatically, a blocking
+defect routes to a fix round within a three-round bound, and anything else on the §4
+escalation list goes to a human.
 
 In this repo's own vocabulary: merging is a step whose delegate rung is 4 — the agent runs
 it, this bar is the independent check that makes that safe, and §4 is the `escalate_when`.
