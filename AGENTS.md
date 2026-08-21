@@ -64,6 +64,10 @@ linear). A failed check or a blocking convention finding is the loop's own mater
 routes to a fix round; anything else on the escalation list in §4 of that file leaves the
 loop and goes to a human, whatever the round.
 
+Changes to **how this repo works** — conventions here, the quality bar, the review loop —
+are captured as bets in `improvements/` with kill criteria, not edited in passing. Same rule
+this repo gives everyone else; see `improvements/README.md` for the lane and how to run it.
+
 That is this repo running its own delegation ladder on itself: merging sits at rung 4 —
 the agent runs it, the quality bar is the independent check that makes it safe, and the
 escalation list is the `escalate_when`. The verifier is never the doer.
