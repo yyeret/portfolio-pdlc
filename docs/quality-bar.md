@@ -77,9 +77,46 @@ Any one of these turns a PASS into a hand-back, however good the change is:
 - Every verification claim in the PR body is reproducible by running the command it quotes.
 - Existing behaviour is unchanged unless the PR says otherwise and shows why that is safe.
 
-## 6. Merging
+## 6. The review loop
+
+Review is a loop, not a single pass: **review → fix the blocking findings → re-review →
+merge when clean.** It is bounded, because an unbounded critique-revise loop converges on
+plausibility rather than truth — the same rule this repo applies to every inner graph.
+
+```
+round 1..3:
+    verdict = independent review (fresh context, given the diff + every prior round's findings)
+    PASS / PASS-WITH-NOTES         -> merge, record the rounds, done
+    any §4 escalation condition    -> hand to a human immediately, whatever the round
+    BLOCK on round 3               -> hand to a human with what is still open
+    BLOCK otherwise                -> fix ONLY the blocking findings, push, next round
+```
+
+**At most three reviews — two fix rounds.** If it is not clean by then, the problem is not
+one more fix.
+
+Rules that keep the loop honest:
+
+1. **Every round gets a fresh context.** Not the same reviewer continued — a reviewer that
+   already published a verdict defends it. Hand the new one the diff, the previous rounds'
+   findings, and the fix commits; it re-reads the diff itself and checks both that the old
+   findings are genuinely fixed and that the fixes broke nothing.
+2. **Only BLOCK-level findings get fixed in the loop.** Notes are recorded in the PR body
+   and left. Chasing notes is how a review loop turns into infinite polish.
+3. **Convergence guard.** If a round raises a *new* blocking finding that is not a
+   consequence of the previous round's fix — something an earlier round could have caught
+   and did not — the reviews have stopped converging. Stop the loop, hand back with
+   everything still open, and do not spend the remaining round.
+4. **Escalation short-circuits.** A §4 condition is not fixable by another round. Exit to a
+   human the moment one trips.
+5. **The loop leaves a trace.** Each round is recorded in the PR body: round number,
+   verdict, blocking findings, what changed in response. A reader should be able to tell a
+   loop that converged from one that gave up.
+
+## 7. Merging
 
 On PASS or PASS-WITH-NOTES: merge with **rebase** — this repo's history is linear and each
-commit carries its own reasoning. Report the merge, the verdict, and any notes.
+commit carries its own reasoning. Report the merge, the rounds it took, and any notes.
 
-On BLOCK: leave the PR open, say what is wrong in one paragraph, and hand it back.
+On hand-back: leave the PR open, say what is open in one paragraph, and name what would
+resolve it.
