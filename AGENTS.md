@@ -60,8 +60,9 @@ Changes reach `main` through a pull request, and the PR is reviewed against
 `docs/quality-bar.md` by an **independent reviewer** — a fresh context that did not write
 the change — before it merges. Review is a bounded loop: review → fix the blocking findings
 → re-review, at most three rounds, then merge on a clean verdict (rebase, so history stays
-linear). Anything on the escalation list in §4 of that file leaves the loop and goes to a
-human instead, whatever the round.
+linear). A failed check or a blocking convention finding is the loop's own material and
+routes to a fix round; anything else on the escalation list in §4 of that file leaves the
+loop and goes to a human, whatever the round.
 
 That is this repo running its own delegation ladder on itself: merging sits at rung 4 —
 the agent runs it, the quality bar is the independent check that makes it safe, and the
