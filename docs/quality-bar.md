@@ -1,0 +1,85 @@
+# Quality Bar — what a change to this repo has to clear
+
+Every pull request opened from an agent session in this repo is reviewed against this bar
+by an **independent reviewer** — a fresh context that did not write the change — before it
+merges. A clean verdict merges automatically; anything else goes back to a human.
+
+In this repo's own vocabulary: merging is a step whose delegate rung is 4 — the agent runs
+it, this bar is the independent check that makes that safe, and §4 is the `escalate_when`.
+The verifier is never the doer.
+
+## 1. The reviewer's stance
+
+You are not helping the author. Your job is to find the thing that will embarrass this repo
+in public — a script that does not run, a claim the diff does not support, a convention
+quietly broken. Read the diff yourself; do not take the PR body's word for anything.
+
+**Report what you examined, even when you find nothing.** A review with no output is
+indistinguishable from a review that never happened.
+
+Verdict: **PASS** · **PASS-WITH-NOTES** (merge, notes recorded for later) · **BLOCK** (do
+not merge; say exactly what is wrong and what would fix it).
+
+## 2. Mechanical checks — every one must pass
+
+Run them; do not reason about whether they would pass.
+
+```bash
+python3 -m py_compile skills/*/scripts/*.py
+
+python3 skills/flow-driven/scripts/flow_lint.py  skills/flow-driven/example/fiy-content-engine --today 2026-08-19
+python3 skills/flow-driven/scripts/flow_board.py skills/flow-driven/example/fiy-content-engine --today 2026-08-19
+python3 skills/flow-driven/scripts/flow_next.py  skills/flow-driven/example/fiy-content-engine --today 2026-08-19
+python3 skills/portfolio-pdlc/scripts/portfolio_board.py skills/portfolio-pdlc/example/fiy-portfolio --today 2026-08-17
+```
+
+| # | Check | Passes when |
+|---|---|---|
+| M1 | Scripts compile | `py_compile` clean on every script |
+| M2 | Flow example lints | `CLEAN`, **0 violations**; warnings only the ones its README documents as seeded |
+| M3 | Board regenerates | exits 0, and `git diff --stat` on the example shows no unexplained churn |
+| M4 | Orchestrator runs | prints a run card and exits 0/3/4, never a traceback |
+| M5 | Portfolio example still works | board regenerates, same violation count as before the change |
+| M6 | Skill frontmatter | every `skills/*.md` has `name` (matching its filename), `description`, `metadata.version` |
+| M7 | No dangling references | every `skills/…` or `docs/…` path named in changed files exists |
+| M8 | Stdlib only | no third-party imports, no network calls in any script |
+| M9 | No junk committed | no `__pycache__/`, `exports/`, `.pyc`, scratch files, or editor droppings |
+
+## 3. Convention checks — cite the line or stay silent
+
+| # | Check | The convention |
+|---|---|---|
+| C1 | Layout | skills at `skills/<name>.md`, companions under `skills/<name>/` |
+| C2 | Language | confidence and "what you can rely on" — never gates, compliance, or consultant filler |
+| C3 | Generated files | `board.md`, `flow-log.csv`, `exports/` are regenerated, never hand-edited |
+| C4 | Bets, not edits | workflow/process changes ride the improvement lane; they are not slipped into a definition in passing |
+| C5 | Spec in step | `docs/specs/flow-driven.md` matches what `skills/flow-driven*` actually does; **R-ids are stable and never renumbered** |
+| C6 | Evidence language | exit evidence is written as artefacts and observations, never activities |
+| C7 | No session leakage | no model identifiers, session URLs, or harness-specific assumptions in committed material |
+| C8 | No secrets | no tokens, keys, internal hostnames, or private personal data |
+
+## 4. Escalation — do NOT auto-merge, hand back to the human
+
+Any one of these turns a PASS into a hand-back, however good the change is:
+
+1. Any mechanical check fails, or a convention finding the reviewer rates as blocking.
+2. **Public framing**: README top matter, LICENSE, the name of a skill family, or how the
+   work is positioned to readers.
+3. **Deletions or renames** of existing material beyond what the stated scope requires.
+4. The change is **larger than the request that prompted it** — scope crept.
+5. The PR body itself flags an open question, a judgement call, or a trade-off it resolved
+   unilaterally.
+6. Anything irreversible or outward-facing that a revert would not actually undo.
+
+## 5. Change integrity
+
+- The commit messages and PR body describe what the diff **does**, not what was intended.
+- Every verification claim in the PR body is reproducible by running the command it quotes.
+- Existing behaviour is unchanged unless the PR says otherwise and shows why that is safe.
+
+## 6. Merging
+
+On PASS or PASS-WITH-NOTES: merge with **rebase** — this repo's history is linear and each
+commit carries its own reasoning. Report the merge, the verdict, and any notes.
+
+On BLOCK: leave the PR open, say what is wrong in one paragraph, and hand it back.

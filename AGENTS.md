@@ -54,6 +54,18 @@ defining a real stream with `skills/flow-driven-define.md`.
 - Changes to a definition of workflow are captured as bets with kill criteria, never edited
   in passing.
 
+## Shipping changes here
+
+Changes reach `main` through a pull request, and the PR is reviewed against
+`docs/quality-bar.md` by an **independent reviewer** — a fresh context that did not write
+the change — before it merges. A clean verdict merges automatically (rebase, so history
+stays linear); anything on the escalation list in §4 of that file goes back to a human
+instead.
+
+That is this repo running its own delegation ladder on itself: merging sits at rung 4 —
+the agent runs it, the quality bar is the independent check that makes it safe, and the
+escalation list is the `escalate_when`. The verifier is never the doer.
+
 ## Specs
 
 `docs/specs/flow-driven.md` is the requirement-level spec for the flow-driven
