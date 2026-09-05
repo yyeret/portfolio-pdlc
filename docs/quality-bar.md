@@ -51,7 +51,7 @@ python3 skills/portfolio-pdlc/scripts/portfolio_board.py skills/portfolio-pdlc/e
 
 | # | Check | The convention |
 |---|---|---|
-| C1 | Layout | skills at `skills/<name>.md`, companions under `skills/<name>/` |
+| C1 | Layout | skills at `skills/<name>/SKILL.md`, companions alongside it under `skills/<name>/` |
 | C2 | Language | confidence and "what you can rely on" — never gates, compliance, or consultant filler |
 | C3 | Generated files | `board.md`, `flow-log.csv`, `exports/` are regenerated, never hand-edited |
 | C4 | Bets, not edits | workflow/process changes ride the improvement lane; they are not slipped into a definition in passing |

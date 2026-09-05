@@ -15,11 +15,11 @@ Two families live here:
 
 ## How to work here
 
-1. **Entry point**: read `skills/portfolio-pdlc.md` for portfolio work, or
-   `skills/flow-driven.md` for a single value stream — each carries its operating loop,
+1. **Entry point**: read `skills/portfolio-pdlc/SKILL.md` for portfolio work, or
+   `skills/flow-driven/SKILL.md` for a single value stream — each carries its operating loop,
    its leverage table, and the routing to member skills. Load member skills
-   (`skills/<name>.md`) only when the loop routes you there; each references companion
-   material in `skills/<name>/` (load only what you need).
+   (`skills/<name>/SKILL.md`) only when the loop routes you there; each references
+   companion material alongside it in `skills/<name>/` (load only what you need).
 2. **State lives in card frontmatter.** `board.md` and `flow-log.csv` inside a workspace
    are generated projections — regenerate them with
    `skills/portfolio-pdlc/scripts/portfolio_board.py` (portfolio) or
@@ -37,15 +37,15 @@ Two families live here:
 
 `skills/portfolio-pdlc/example/fiy-portfolio/` is a fictional scale-up portfolio with
 deliberately seeded smells (see its README). Run the loop there before wiring a real
-portfolio with `skills/portfolio-pdlc-wire.md`.
+portfolio with `skills/portfolio-pdlc-wire/SKILL.md`.
 
 `skills/flow-driven/example/fiy-content-engine/` is the same fictional company's content
 value stream, wired as a flow workspace with its own seeded smells. Run cycles there before
-defining a real stream with `skills/flow-driven-define.md`.
+defining a real stream with `skills/flow-driven-define/SKILL.md`.
 
 ## Conventions
 
-- Skills: entry file at `skills/<name>.md`; companions in `skills/<name>/`
+- Skills: entry file at `skills/<name>/SKILL.md`; companions alongside it in `skills/<name>/`
   (`references/`, `templates/`, `scripts/`, `example/`).
 - Scripts are `python3` stdlib only; no network, no harness assumptions.
 - Sponsor-facing language is confidence and "what you can rely on" — never gates or
