@@ -1,0 +1,56 @@
+name: validate
+
+# This repo is installed, not just read. A broken manifest or a skill that
+# drifts out of `skills/<name>/SKILL.md` does not fail loudly — the plugin
+# installs empty, or installs on one host and not the other, and the first
+# person to notice is whoever tried to use it.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Manifests agree and the skill layout holds
+        run: python3 scripts/validate_plugin.py
+
+      - name: Every manifest is valid JSON
+        run: |
+          for f in .claude-plugin/*.json .codex-plugin/*.json .agents/plugins/*.json; do
+            echo "Parsing $f"
+            python3 -m json.tool "$f" > /dev/null
+          done
+
+      - name: The scripts skills ship still compile
+        run: |
+          find skills -name '*.py' -print -exec python3 -m py_compile {} +
+
+      - name: Validate the plugin with the Claude CLI
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude plugin validate .
+
+      # Everyone else installs from a clone, which only carries committed
+      # content. Validating the working tree would pass even if a manifest or a
+      # skill were untracked.
+      - name: Validate from a fresh clone
+        run: |
+          git clone --quiet --depth 1 "file://$PWD" /tmp/clone
+          cd /tmp/clone
+          test -f .claude-plugin/marketplace.json
+          test -f .claude-plugin/plugin.json
+          test -f .agents/plugins/marketplace.json
+          test -f .codex-plugin/plugin.json
+          skills=$(find skills -name SKILL.md | wc -l)
+          echo "Clone carries $skills skills"
+          test "$skills" -gt 0
+          python3 scripts/validate_plugin.py
+          claude plugin validate .

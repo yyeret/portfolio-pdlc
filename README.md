@@ -25,30 +25,62 @@ run it. The thinking behind it: [Scaling Product Orgs with Portfolio Agility](ht
 
 | Piece | What it does |
 |---|---|
-| `skills/portfolio-pdlc.md` | The operating system: workspace contract, one-move-per-cycle loop, leverage table |
-| `skills/portfolio-pdlc-wire.md` | Turn whatever an org has (decks, exports, folders) into a wired portfolio workspace |
-| `skills/portfolio-pdlc-assess.md` | Stale-status sweep, outcome-vs-activity x-ray, flow + risk-balance read, review brief |
-| `skills/portfolio-pdlc-advance.md` | Move ONE initiative toward its next decision; prepare (never make) the human call |
-| `skills/portfolio-pdlc-strengthen.md` | Upgrade a card into a steering instrument: outcome hypothesis, leading indicators, evidence-tagged risks |
-| `skills/portfolio-pdlc-improve.md` | Probe the process AND the portfolio topology; capture improvement bets, never impulse-edit |
-| `skills/portfolio-pdlc-simulate.md` | Deterministic Monte Carlo what-ifs: WIP limits, intake shaping, dependency-tax reduction |
-| `skills/sniff-test.md` (+ portfolio add-on) | The diagnostic engine: clarity-vs-stage reads, watermelon hunting, derisking fit |
-| `skills/lean-product-canvas-coach.md` | Coach an initiative from fuzzy ambition to testable hypotheses |
+| `skills/portfolio-pdlc/SKILL.md` | The operating system: workspace contract, one-move-per-cycle loop, leverage table |
+| `skills/portfolio-pdlc-wire/SKILL.md` | Turn whatever an org has (decks, exports, folders) into a wired portfolio workspace |
+| `skills/portfolio-pdlc-assess/SKILL.md` | Stale-status sweep, outcome-vs-activity x-ray, flow + risk-balance read, review brief |
+| `skills/portfolio-pdlc-advance/SKILL.md` | Move ONE initiative toward its next decision; prepare (never make) the human call |
+| `skills/portfolio-pdlc-strengthen/SKILL.md` | Upgrade a card into a steering instrument: outcome hypothesis, leading indicators, evidence-tagged risks |
+| `skills/portfolio-pdlc-improve/SKILL.md` | Probe the process AND the portfolio topology; capture improvement bets, never impulse-edit |
+| `skills/portfolio-pdlc-simulate/SKILL.md` | Deterministic Monte Carlo what-ifs: WIP limits, intake shaping, dependency-tax reduction |
+| `skills/sniff-test/SKILL.md` (+ portfolio add-on) | The diagnostic engine: clarity-vs-stage reads, watermelon hunting, derisking fit |
+| `skills/lean-product-canvas-coach/SKILL.md` | Coach an initiative from fuzzy ambition to testable hypotheses |
 | `skills/portfolio-pdlc/scripts/` | `portfolio_board.py` (board/metrics/flow-log) and `portfolio_sim.py` (simulation) — python3 stdlib, no dependencies |
 | `skills/portfolio-pdlc/example/fiy-portfolio/` | A fictional scale-up portfolio with deliberately seeded smells to practice on |
-| `skills/flow-driven.md` | Agentic loop engineering for one value stream: workspace contract, run loop, leverage table |
-| `skills/flow-driven-choose.md` | Find the operational and development value streams; pick the one to make agentic first |
-| `skills/flow-driven-define.md` | Discover the workflow by interview, derive one from first principles, or adapt an existing one — unit of value, steps, graph, exit evidence, delegate + run model per step, policies |
-| `skills/flow-driven-ingest.md` | Absorb spec-kit, Kiro, a bespoke harness, or a tracker — wrap, don't rewrite |
-| `skills/flow-driven-scaffold.md` | Turn the definition into a working markdown workspace with real stubs |
-| `skills/flow-driven-instrument.md` | What to measure, wired into the steps that feed it |
-| `skills/flow-driven-integrate.md` | Bind it to GitHub, a Kanban tool, or a dashboard — one writer per field |
-| `skills/flow-driven-run.md` | Advance the flow: one move per cycle, under the step's contract |
-| `skills/flow-driven-evolve.md` | The meta-loop: probe the loop itself, capture bets, change nothing on the spot |
+| `skills/flow-driven/SKILL.md` | Agentic loop engineering for one value stream: workspace contract, run loop, leverage table |
+| `skills/flow-driven-choose/SKILL.md` | Find the operational and development value streams; pick the one to make agentic first |
+| `skills/flow-driven-define/SKILL.md` | Discover the workflow by interview, derive one from first principles, or adapt an existing one — unit of value, steps, graph, exit evidence, delegate + run model per step, policies |
+| `skills/flow-driven-ingest/SKILL.md` | Absorb spec-kit, Kiro, a bespoke harness, or a tracker — wrap, don't rewrite |
+| `skills/flow-driven-scaffold/SKILL.md` | Turn the definition into a working markdown workspace with real stubs |
+| `skills/flow-driven-instrument/SKILL.md` | What to measure, wired into the steps that feed it |
+| `skills/flow-driven-integrate/SKILL.md` | Bind it to GitHub, a Kanban tool, or a dashboard — one writer per field |
+| `skills/flow-driven-run/SKILL.md` | Advance the flow: one move per cycle, under the step's contract |
+| `skills/flow-driven-evolve/SKILL.md` | The meta-loop: probe the loop itself, capture bets, change nothing on the spot |
 | `skills/flow-driven/references/` | The POV: loop engineering, the interview protocol + archetype matching, why-work-this-way, the unit of value, delegation ladder, measurement, integrations, scale patterns, ingest recipes, evolution path, loop probes |
 | `skills/flow-driven/scripts/` | `flow_lint.py`, `flow_board.py`, `flow_next.py` (+ shared `flow_defs.py`) — python3 stdlib |
 | `skills/flow-driven/example/fiy-content-engine/` | The same fictional company's content stream, wired as a flow workspace |
 | `docs/specs/flow-driven.md` | The requirement-level spec for the flow-driven meta-framework |
+
+## Install
+
+The skills install as a plugin, so they update when this repo does — you do not
+have to keep a clone in sync by hand.
+
+**Claude Code, Cowork, Claude Desktop**
+
+```text
+/plugin marketplace add yyeret/portfolio-pdlc
+/plugin install portfolio-pdlc@portfolio-pdlc
+```
+
+Installed skills are namespaced: `/portfolio-pdlc:portfolio-pdlc`,
+`/portfolio-pdlc:flow-driven`, `/portfolio-pdlc:sniff-test`, and so on.
+
+**ChatGPT / Codex, Gemini CLI, Antigravity, Cline**
+
+There is no `marketplace add` subcommand on these. Install globally with the
+`skills` CLI — `-g` is required, or it installs into whatever directory you
+happen to be standing in:
+
+```bash
+npx skills add yyeret/portfolio-pdlc -g
+```
+
+`--skill <name>` takes a subset and `--list` shows what the repo offers first.
+Working *inside* a clone, Codex picks up `.agents/plugins/marketplace.json` with
+no install step at all.
+
+**Or just clone it.** Everything here is plain markdown and stdlib Python; the
+quickstarts below run straight out of a checkout with nothing installed.
 
 ## Quickstart (five minutes, no setup)
 
@@ -91,19 +123,19 @@ prepare decisions and humans make them.
 
 Then point your agent at a workflow of your own:
 
-> Load `skills/flow-driven-define.md` and help me define the workflow for <stream>.
+> Load `skills/flow-driven-define/SKILL.md` and help me define the workflow for <stream>.
 
 Already have spec-kit, Kiro, a homegrown harness, or a tracker full of states? Start with
-`skills/flow-driven-ingest.md` — it maps what exists before proposing anything.
+`skills/flow-driven-ingest/SKILL.md` — it maps what exists before proposing anything.
 
 ## Wiring a real portfolio
 
 1. Open your agent in a fresh folder (or point it at the folder where your initiative
    material already lives).
-2. Ask it to load `skills/portfolio-pdlc-wire.md` from this repo and wire the portfolio.
+2. Ask it to load `skills/portfolio-pdlc-wire/SKILL.md` from this repo and wire the portfolio.
 3. It inventories what exists, drafts the charter and workflow definition with you,
    creates one card per significant investment, and generates the first board.
-4. From then on, run loop cycles (`skills/portfolio-pdlc.md`) on whatever cadence you
+4. From then on, run loop cycles (`skills/portfolio-pdlc/SKILL.md`) on whatever cadence you
    like — including via your harness's recurring/goal-loop mechanism.
 
 Works from Claude Code, Codex, Gemini CLI / Antigravity, and anything else that reads

@@ -6,7 +6,7 @@ This folder is a **portfolio workspace** run on the `portfolio-pdlc` operating s
 ## Session start
 
 1. Read `PORTFOLIO.md` (charter) and skim `board.md`.
-2. Load `<PDLC_REPO>/skills/portfolio-pdlc.md` and follow its operating loop.
+2. Load `<PDLC_REPO>/skills/portfolio-pdlc/SKILL.md` and follow its operating loop.
 3. Regenerate the board before acting:
 
 ```bash

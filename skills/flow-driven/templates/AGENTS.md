@@ -14,7 +14,7 @@ python3 <REPO>/skills/flow-driven/scripts/flow_board.py .    # regenerate the pr
 python3 <REPO>/skills/flow-driven/scripts/flow_next.py .     # the run card for one move
 ```
 
-3. Load `<REPO>/skills/flow-driven.md` and run the cycle it describes.
+3. Load `<REPO>/skills/flow-driven/SKILL.md` and run the cycle it describes.
 
 ## House rules
 

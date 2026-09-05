@@ -6,7 +6,7 @@ seeded smells) run on the `portfolio-pdlc` operating system in this repo.
 ## Session start
 
 1. Read `PORTFOLIO.md`, skim `board.md`.
-2. Load `skills/portfolio-pdlc.md` from this repo's root and follow its operating loop.
+2. Load `skills/portfolio-pdlc/SKILL.md` from this repo's root and follow its operating loop.
 3. Regenerate the board before acting (pass `--today 2026-08-17` for the canonical demo
    flags):
 

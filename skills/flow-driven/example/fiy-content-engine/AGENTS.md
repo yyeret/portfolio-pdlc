@@ -14,7 +14,7 @@ python3 <REPO>/skills/flow-driven/scripts/flow_board.py . --today 2026-08-19
 python3 <REPO>/skills/flow-driven/scripts/flow_next.py .  --today 2026-08-19
 ```
 
-3. Load `<REPO>/skills/flow-driven.md` and run one cycle.
+3. Load `<REPO>/skills/flow-driven/SKILL.md` and run one cycle.
 
 ## House rules
 
