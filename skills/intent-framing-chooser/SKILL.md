@@ -30,6 +30,12 @@ So this skill does not hand over a canvas. It explains what the options are good
 and bad at, helps someone choose, and then writes them a local skill around that
 choice.
 
+That last part is deliberate. For a thinking artifact, **AI is the coach, not the
+generator** — someone who has never worked a frame themselves should run one a
+couple of times before an agent fills it in for them, and the version they argue
+their way to is the one that survives a sponsor. So the output is a skill that
+will ask them questions later, not a document with the answers already in it.
+
 ## The curated set
 
 Four options, in the order worth considering them. None is reproduced here —
@@ -126,6 +132,11 @@ three answers:
 
 Then say which you would pick and why, in one or two sentences, and name the
 runner-up and what would make it the better call. Do not present a matrix.
+
+**If they cannot choose, invert it.** Ask what happens if they use no frame at
+all — just write a paragraph and go. Then name which of the failure modes below
+they are choosing to own. Most people pick a frame quickly once the question is
+which symptom they are accepting rather than which template is best.
 
 **Watch for the two failure modes:**
 
