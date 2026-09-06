@@ -25,7 +25,7 @@ called ad-hoc, take the named card). Everything else you notice goes to the loop
 
 | Card sits in | Advance means | Compose |
 |---|---|---|
-| explore | Frame the problem for real: draft/complete the lightweight canvas; identify the riskiest DVF assumptions; recommend investigate-further / park | `lean-product-canvas-coach` |
+| explore | Frame the problem for real: draft/complete the lightweight canvas; identify the riskiest DVF assumptions; recommend investigate-further / park | `intent-framing-chooser` |
 | discovery | Drive the timebox to a verdict: run/summarize the experiments against the riskiest assumptions, tag results evidence/opinion, produce a proceed / de-risk-further / stop recommendation | `sniff-test` (readiness check) |
 | plan-commit | Build the commit package: Outcome-Oriented Roadmap with an explicit confidence range, resourcing picture, what's still unproven at commit | |
 | execute | Keep confidence honest: read leading indicators, check slices are validating the hypothesis, surface drift (scope creep on an "experiment", indicators flat) as a steer-or-escalate note | |
