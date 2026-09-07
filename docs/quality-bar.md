@@ -29,23 +29,17 @@ Run them; do not reason about whether they would pass.
 ```bash
 python3 -m py_compile skills/*/scripts/*.py
 
-python3 skills/flow-driven/scripts/flow_lint.py  skills/flow-driven/example/fiy-content-engine --today 2026-08-19
-python3 skills/flow-driven/scripts/flow_board.py skills/flow-driven/example/fiy-content-engine --today 2026-08-19
-python3 skills/flow-driven/scripts/flow_next.py  skills/flow-driven/example/fiy-content-engine --today 2026-08-19
 python3 skills/portfolio-pdlc/scripts/portfolio_board.py skills/portfolio-pdlc/example/fiy-portfolio --today 2026-08-17
 ```
 
 | # | Check | Passes when |
 |---|---|---|
 | M1 | Scripts compile | `py_compile` clean on every script |
-| M2 | Flow example lints | `CLEAN`, **0 violations**; warnings only the ones its README documents as seeded |
-| M3 | Board regenerates | exits 0, and `git diff --stat` on the example shows no unexplained churn |
-| M4 | Orchestrator runs | prints a run card and exits 0/3/4, never a traceback |
-| M5 | Portfolio example still works | exits 0 and `board.md` regenerates |
-| M6 | Skill frontmatter | every `skills/*.md` has `name` (matching its filename), `description`, `metadata.version` |
-| M7 | No dangling references | every `skills/…` or `docs/…` path named in changed files exists |
-| M8 | Stdlib only | no third-party imports, no network calls in any script |
-| M9 | No junk committed | no `__pycache__/`, `exports/`, `.pyc`, scratch files, or editor droppings |
+| M2 | Portfolio example still works | exits 0 and `board.md` regenerates |
+| M3 | Skill frontmatter | every `skills/*/SKILL.md` has `name` matching its directory, `description`, `metadata.version` |
+| M4 | No dangling references | every local `skills/…` or `docs/…` path named in changed files exists |
+| M5 | Stdlib only | no third-party imports, no network calls in any script |
+| M6 | No junk committed | no `__pycache__/`, `exports/`, `.pyc`, scratch files, or editor droppings |
 
 ## 3. Convention checks — cite the line or stay silent
 
@@ -55,10 +49,9 @@ python3 skills/portfolio-pdlc/scripts/portfolio_board.py skills/portfolio-pdlc/e
 | C2 | Language | confidence and "what you can rely on" — never gates, compliance, or consultant filler |
 | C3 | Generated files | `board.md`, `flow-log.csv`, `exports/` are regenerated, never hand-edited |
 | C4 | Bets, not edits | workflow/process changes ride the improvement lane; they are not slipped into a definition in passing |
-| C5 | Spec in step | `docs/specs/flow-driven.md` matches what `skills/flow-driven*` actually does; **R-ids are stable and never renumbered** |
-| C6 | Evidence language | exit evidence is written as artefacts and observations, never activities |
-| C7 | No session leakage | no model identifiers, session URLs, or harness-specific assumptions in committed **files** (commit trailers are out of scope) |
-| C8 | No secrets | no tokens, keys, internal hostnames, or private personal data |
+| C5 | Evidence language | exit evidence is written as artefacts and observations, never activities |
+| C6 | No session leakage | no model identifiers, session URLs, or harness-specific assumptions in committed **files** (commit trailers are out of scope) |
+| C7 | No secrets | no tokens, keys, internal hostnames, or private personal data |
 
 ## 4. Escalation — do NOT auto-merge, hand back to the human
 

@@ -18,9 +18,9 @@ alters *how the next change gets made*.
 
 ## The card
 
-One folder per bet, `improvements/<slug>/improvement.md`, using the same schema as
-`skills/flow-driven/templates/improvement.md` — this repo should be legible to the
-framework it ships. `type` here is `improvement-process`, `improvement-convention`, or
+One folder per bet, `improvements/<slug>/improvement.md`, using
+`skills/portfolio-pdlc/templates/improvement.md`. `type` here is
+`improvement-process`, `improvement-convention`, or
 `improvement-tooling`.
 
 Every card carries, at birth:
