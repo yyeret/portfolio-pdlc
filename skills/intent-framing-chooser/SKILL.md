@@ -1,6 +1,6 @@
 ---
 name: intent-framing-chooser
-description: Help someone choose how to frame the intent behind an initiative — Lean Product Canvas, a SAFe epic hypothesis statement, a feature canvas, or something they shape themselves — and then configure a local coaching skill around the one they picked. Use when an initiative is fuzzy and someone asks "what template should we use", when a team has inherited a framing artifact that does not fit the work, when an AI use case or business initiative needs an outcome frame rather than a product one, or before running sniff-test on an initiative that has no framing artifact at all. Teaches the trade-offs between the options; does not reproduce any of them.
+description: Help someone choose how to frame the intent behind an initiative — Lean Product Canvas, a SAFe epic hypothesis statement, a feature template, or something they shape themselves — and then configure a local coaching skill around the one they picked. Use when an initiative is fuzzy and someone asks "what template should we use", when a team has inherited a framing artifact that does not fit the work, when an AI use case or business initiative needs an outcome frame rather than a product one, or before running sniff-test on an initiative that has no framing artifact at all. Teaches the trade-offs between the options; does not reproduce any of them.
 metadata:
   tags: product-strategy
   version: 1.0.0
@@ -62,7 +62,7 @@ to treat the whole exercise as paperwork.
 **This is Yuval's default.** It carries the strategy altitude and the product
 altitude in one artifact and refuses to let an initiative be its own goal.
 
-- Canvas and Lean Strategy Canvas: <https://www.senseandrespond.co/the-lean-product-canvas>
+- Both canvases, and the free PDF download: <https://www.senseandrespond.co/the-lean-product-canvas>
 - Gothelf on its lineage from the Lean UX Canvas: <https://jeffgothelf.com/blog/the-lean-product-canvas/>
 - Licensed **CC BY-NC-SA** on the artifact itself. Download it from the source
   rather than copying it out of anywhere else, and note the NonCommercial term
@@ -82,10 +82,11 @@ using something else means translating at every gate.
 leading-indicator field is the tell — filled honestly it is the best part; filled
 to satisfy a template it is where watermelons are born.
 
-- <https://framework.scaledagile.com/> — epic and Lean Portfolio Management pages.
-  © Scaled Agile, Inc.; use their material under their permissions, not a copy.
+- The epic: <https://framework.scaledagile.com/epic/>
+- The template itself, as a `.docx`: <https://framework.scaledagile.com/wp-content/uploads/2025/03/Epic-Hypothesis-Statement.docx>
+- © Scaled Agile, Inc.; use their material under their permissions, not a copy of it.
 
-### A feature canvas
+### A feature template
 
 Mark Richards' feature template, refined with customers over years, pulls naming,
 problem statement, hypothesis and prioritisation into one artifact sized for a
@@ -98,9 +99,10 @@ team keeps arriving with solutions that have no stated problem.
 stretching it to cover a portfolio bet loses the strategy context that the Lean
 Strategy Canvas carries.
 
-- <https://www.shapingagility.com/>
-- Scaled Agile's Fellow blog, *Crafting Clarity: Using Feature Templates to Shape
-  and Communicate Intent*.
+- The template, from Mark Richards: <https://www.shapingagility.com/blog/feature-template>
+- His reasoning on the SAFe Fellow blog, *Crafting Clarity: Using Feature Templates
+  to Shape and Communicate Intent*:
+  <https://framework.scaledagile.com/blog/crafting-clarity-using-feature-templates-to-shape-and-communicate-intent/>
 
 ### Shape your own
 
@@ -198,9 +200,9 @@ recommendation with an interest attached, and discount it accordingly. The
 material is Gothelf and Seiden's either way, and their books
 (*Lean UX*, *Who Does What By How Much?*) cover the thinking without a class.
 
-**The epic hypothesis statement is Scaled Agile's** (© Scaled Agile, Inc.), and
-**the feature canvas is Mark Richards'** at
-[Shaping Agility](https://www.shapingagility.com/).
+**The epic hypothesis statement is Scaled Agile's** (© Scaled Agile, Inc.) —
+<https://framework.scaledagile.com/epic/> — and **the feature template is Mark
+Richards'** at [Shaping Agility](https://www.shapingagility.com/blog/feature-template).
 
 *These are Yuval's questions about other people's frameworks, not those authors'
 endorsement of anything here.*

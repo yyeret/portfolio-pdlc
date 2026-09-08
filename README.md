@@ -33,7 +33,7 @@ run it. The thinking behind it: [Scaling Product Orgs with Portfolio Agility](ht
 | `skills/portfolio-pdlc-improve/SKILL.md` | Probe the process AND the portfolio topology; capture improvement bets, never impulse-edit |
 | `skills/portfolio-pdlc-simulate/SKILL.md` | Deterministic Monte Carlo what-ifs: WIP limits, intake shaping, dependency-tax reduction |
 | `skills/sniff-test/SKILL.md` (+ portfolio add-on) | The diagnostic engine: clarity-vs-stage reads, watermelon hunting, derisking fit |
-| `skills/intent-framing-chooser/SKILL.md` | Choose how to frame an initiative's intent — canvas, epic hypothesis, feature canvas, or your own — and configure a local skill around it |
+| `skills/intent-framing-chooser/SKILL.md` | Choose how to frame an initiative's intent — canvas, epic hypothesis, feature template, or your own — and configure a local skill around it |
 | `skills/portfolio-pdlc/scripts/` | `portfolio_board.py` (board/metrics/flow-log) and `portfolio_sim.py` (simulation) — python3 stdlib, no dependencies |
 | `skills/portfolio-pdlc/example/fiy-portfolio/` | A fictional scale-up portfolio with deliberately seeded smells to practice on |
 | `skills/flow-driven/SKILL.md` | Agentic loop engineering for one value stream: workspace contract, run loop, leverage table |
