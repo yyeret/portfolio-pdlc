@@ -135,7 +135,7 @@ and they advance through the same stages as everything else: Explore (framing) �
 | What-if on WIP limits, topology change, arrival rate; derisk a big improvement bet | `portfolio-pdlc-simulate` |
 | Deep single-initiative diagnostic | `sniff-test` (in this repo) |
 | Board-level pattern read | `sniff-test-portfolio` (in this repo) |
-| Build/strengthen a canvas | `lean-product-canvas-coach` (in this repo) |
+| No framing artifact, or the wrong one | `intent-framing-chooser` (in this repo) |
 
 **Self-contained by design:** everything the loop needs ships in this repo — the
 diagnostic skills above plus inline rubrics (stage expectations, input→impact ladder,

@@ -33,7 +33,7 @@ run it. The thinking behind it: [Scaling Product Orgs with Portfolio Agility](ht
 | `skills/portfolio-pdlc-improve/SKILL.md` | Probe the process AND the portfolio topology; capture improvement bets, never impulse-edit |
 | `skills/portfolio-pdlc-simulate/SKILL.md` | Deterministic Monte Carlo what-ifs: WIP limits, intake shaping, dependency-tax reduction |
 | `skills/sniff-test/SKILL.md` (+ portfolio add-on) | The diagnostic engine: clarity-vs-stage reads, watermelon hunting, derisking fit |
-| `skills/lean-product-canvas-coach/SKILL.md` | Coach an initiative from fuzzy ambition to testable hypotheses |
+| `skills/intent-framing-chooser/SKILL.md` | Choose how to frame an initiative's intent — canvas, epic hypothesis, feature template, or your own — and configure a local skill around it |
 | `skills/portfolio-pdlc/scripts/` | `portfolio_board.py` (board/metrics/flow-log) and `portfolio_sim.py` (simulation) — python3 stdlib, no dependencies |
 | `skills/portfolio-pdlc/example/fiy-portfolio/` | A fictional scale-up portfolio with deliberately seeded smells to practice on |
 | `skills/flow-driven/SKILL.md` | Agentic loop engineering for one value stream: workspace contract, run loop, leverage table |
@@ -191,4 +191,13 @@ somewhere interesting, I'd genuinely like to hear what the first generated board
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+Skill content is [CC BY-SA 4.0](LICENSE) — use it commercially, adapt it, build on
+it, with attribution, and **share your adaptations under the same licence**. The
+Python scripts are [MIT](LICENSE-CODE). This matches
+[ai-impact](https://github.com/yyeret/ai-impact), so material can move between the
+two without a licence problem.
+
+The frames these skills point at are other people's, under their own terms — the
+Lean Product Canvas is CC BY-NC-SA, SAFe material is © Scaled Agile, Inc. Nothing
+here reproduces them, which is why this repo can be ShareAlike without conflict.
+Get those artifacts from their sources; `intent-framing-chooser` carries the links.

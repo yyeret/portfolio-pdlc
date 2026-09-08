@@ -1,0 +1,4 @@
+interface:
+  display_name: "Intent Framing Chooser"
+  short_description: "Pick a frame for an initiative, then configure a skill around it"
+  default_prompt: "Use $intent-framing-chooser to work out how this initiative's intent should be framed, and configure a local skill around the frame we choose."

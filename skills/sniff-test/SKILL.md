@@ -103,4 +103,6 @@ Beyond the artifacts, I'll establish two things: the initiative's **tier** (Tier
 ## Related Skills
 
 - `sniff-test-portfolio` — the multi-initiative add-on: shadowing/duplicate detection, WIP clustering, portfolio risk balance (Explore/Discovery vs. Build & Deliver split), and board-wide stale-status sweeps.
-- `lean-product-canvas-coach` — to build or strengthen the canvas this skill reads.
+- `intent-framing-chooser` — when the initiative has no framing artifact yet, or the one
+  it has does not fit the work. It helps pick a frame and configure a coaching skill
+  around it, rather than issuing a template.
