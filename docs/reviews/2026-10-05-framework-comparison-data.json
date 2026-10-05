@@ -1,0 +1,408 @@
+{
+  "date": "2026-10-05",
+  "method": "Independent qualitative assessment of documented support, not Gartner research or observed business performance. Ordinal bands are not equal intervals or an aggregate maturity score.",
+  "rows": [
+    {
+      "id": "A",
+      "name": "Spec Kit \u2014 upstream core",
+      "short": "Spec Kit core",
+      "scope": "Default feature workflow; optional Assess excluded from this row",
+      "revision": "b1463da80bdba3cf6b019118ed499888758233d2",
+      "upstream": 1,
+      "downstream": 0,
+      "sdlc": 4,
+      "pdlc": 1,
+      "profile": [
+        "Supported",
+        "Partial",
+        "Partial",
+        "Partial",
+        "Supported",
+        "Gap",
+        "Gap"
+      ],
+      "verdict": "SDLC-focused",
+      "strength": "Technology-independent success criteria and a repeatable convergence loop preserve specification intent through implementation.",
+      "boundary": "Convergence compares software with spec, plan and tasks; a converged result proceeds to review/PR. Its inventory explicitly excludes post-launch business outcomes.",
+      "gap": "No required owner receives responsibility for adoption evidence or a post-launch product decision.",
+      "impact": "Correct software can close the investment before anyone checks whether users gained the intended benefit.",
+      "repair": "Link the spec to a named adoption owner and a dated outcome decision, using one observable user signal and a guardrail.",
+      "owner": "Product lead",
+      "proof": "A completed pilot review records evidence and an expand, revise or stop decision, linked back to the spec.",
+      "sources": [
+        {
+          "label": "Core convergence: scope and completion",
+          "url": "https://github.com/github/spec-kit/blob/b1463da80bdba3cf6b019118ed499888758233d2/templates%2Fcommands%2Fconverge.md"
+        },
+        {
+          "label": "Spec template: success criteria",
+          "url": "https://github.com/github/spec-kit/blob/b1463da80bdba3cf6b019118ed499888758233d2/templates%2Fspec-template.md"
+        }
+      ],
+      "confidence": "High within inspected path",
+      "indicator_read": "The spec template offers user-capability measures such as completion time and task success, alongside quality or later-result examples. These can be useful leading signals, but the core path does not require their cohort, collection window and investment response.",
+      "table_strength": "Spec and implementation alignment",
+      "table_gap": "No owned outcome review; correct but low-value work can close"
+    },
+    {
+      "id": "A+",
+      "name": "Spec Kit + Assess",
+      "short": "Spec Kit + Assess",
+      "scope": "Optional Assess installed and selected before core SDD",
+      "revision": "b1463da80bdba3cf6b019118ed499888758233d2",
+      "upstream": 3,
+      "downstream": 0,
+      "sdlc": 4,
+      "pdlc": 2,
+      "profile": [
+        "Supported",
+        "Supported",
+        "Partial",
+        "Supported",
+        "Supported",
+        "Gap",
+        "Gap"
+      ],
+      "verdict": "PDLC-aware; loop incomplete",
+      "strength": "Intake, research, definition, shaping and a human-reviewed go/clarify/kill decision can reduce investment in weak ideas.",
+      "boundary": "An approved assessment hands off manually to specification. Assess is a separate workflow without lifecycle hooks.",
+      "gap": "The front-end investment decision has no matching outcome review after delivery.",
+      "impact": "Better initial selection does not tell the sponsor when a once-plausible bet has stopped paying off.",
+      "repair": "Carry the decision hypothesis and success signal from Assess into a release review with an accountable human.",
+      "owner": "Product sponsor",
+      "proof": "The first post-release decision explicitly revisits the original evidence and assumptions.",
+      "sources": [
+        {
+          "label": "Assess workflow boundary",
+          "url": "https://github.com/github/spec-kit/blob/b1463da80bdba3cf6b019118ed499888758233d2/extensions%2Fassess%2FREADME.md"
+        },
+        {
+          "label": "Define: metrics and baseline",
+          "url": "https://github.com/github/spec-kit/blob/b1463da80bdba3cf6b019118ed499888758233d2/extensions%2Fassess%2Fcommands%2Fspeckit.assess.define.md"
+        },
+        {
+          "label": "Decide: evidence and verdict",
+          "url": "https://github.com/github/spec-kit/blob/b1463da80bdba3cf6b019118ed499888758233d2/extensions%2Fassess%2Fcommands%2Fspeckit.assess.decide.md"
+        },
+        {
+          "label": "Human review step",
+          "url": "https://github.com/github/spec-kit/blob/b1463da80bdba3cf6b019118ed499888758233d2/workflows%2Fassess%2Fworkflow.yml"
+        }
+      ],
+      "confidence": "High within inspected path",
+      "indicator_read": "Assess Define asks for success metrics and a current or unknown baseline. This improves the starting question; the post-delivery collection owner, review timing and response remain unconnected.",
+      "table_strength": "Evidence-backed front-end decision",
+      "table_gap": "Post-launch bet is not revisited"
+    },
+    {
+      "id": "B",
+      "name": "Spec Kit \u2014 Yuval PDLC fork",
+      "short": "Yuval PDLC fork",
+      "scope": "Customized specify/plan/tasks/implement/validate path",
+      "revision": "cb644d4ed8fb1555761c366f4d3646e90c743bb6",
+      "upstream": 3,
+      "downstream": 1,
+      "sdlc": 3,
+      "pdlc": 2,
+      "profile": [
+        "Supported",
+        "Supported",
+        "Partial",
+        "Partial",
+        "Supported",
+        "Gap",
+        "Partial"
+      ],
+      "verdict": "PDLC-aware; loop incomplete",
+      "strength": "Conviction and value/usability/feasibility/viability assumptions change the execution strategy. Validation consumes real-world evidence and can recommend a pivot or stop.",
+      "boundary": "A separate validation command can reopen specification; it is not an owned, automatically reached post-delivery review.",
+      "gap": "Adoption ownership, review timing and decision-ready indicator contracts remain unspecified.",
+      "impact": "Teams can select a learning strategy yet finish delivery without settling the assumption that justified the work.",
+      "repair": "Assign one product owner to carry the riskiest assumption through a bounded pilot, threshold-based review and recorded human decision.",
+      "owner": "Product owner",
+      "proof": "One complete spec-to-pilot-to-decision trace changes scope, investment or confidence on the basis of evidence.",
+      "sources": [
+        {
+          "label": "Full local assessment and evidence",
+          "url": "2026-10-05-spec-kit-pdlc-readiness.html"
+        }
+      ],
+      "confidence": "High within inspected path",
+      "indicator_read": "Learning telemetry is tied to leap-of-faith assumptions, which is the right intent. The templates do not complete the population, baseline plan, evidence threshold and accountable response contract.",
+      "table_strength": "Assumption-driven learning and validation",
+      "table_gap": "Optional validation can remain unused"
+    },
+    {
+      "id": "C",
+      "name": "Kiro Specs",
+      "short": "Kiro Specs",
+      "scope": "Documented IDE feature-spec workflow, correctness and hooks; not every Kiro product capability",
+      "revision": "Official docs retrieved 2026-10-05",
+      "upstream": 1,
+      "downstream": 0,
+      "sdlc": 3,
+      "pdlc": 1,
+      "profile": [
+        "Partial",
+        "Partial",
+        "Gap",
+        "Partial",
+        "Supported",
+        "Gap",
+        "Gap"
+      ],
+      "verdict": "SDLC-focused",
+      "strength": "Requirements, design and implementation tasks provide a clear engineering sequence. IDE correctness properties add systematic checks of specified behavior.",
+      "boundary": "Task execution and correctness checks establish implementation conformance. User-configurable hooks extend automation but do not supply a product review contract.",
+      "gap": "The inspected Specs path does not carry product hypotheses, leading signals and an adoption/review owner beyond task completion.",
+      "impact": "Excellent behavioral checks can validate the chosen solution without establishing that it solves a valuable problem.",
+      "repair": "Add a linked intent and learning brief, then name the recipient and trigger for the post-launch outcome review.",
+      "owner": "Product and engineering leads",
+      "proof": "A spec links a customer assumption to a pilot signal and a documented continue/change decision.",
+      "sources": [
+        {
+          "label": "Feature-spec sequence",
+          "url": "https://kiro.dev/docs/specs/feature-specs/"
+        },
+        {
+          "label": "Correctness scope and IDE availability",
+          "url": "https://kiro.dev/docs/specs/correctness/"
+        },
+        {
+          "label": "Configurable hooks",
+          "url": "https://kiro.dev/docs/hooks/"
+        }
+      ],
+      "confidence": "Medium; official documentation, no configured installation or runtime audit",
+      "indicator_read": "Acceptance criteria and correctness properties describe behavior to verify. The inspected Specs documents do not require an early customer-value signal, its observation window or a product decision based on it.",
+      "table_strength": "Structured specs and correctness checks",
+      "table_gap": "Conformance can stand in for product value"
+    },
+    {
+      "id": "D",
+      "name": "OpenSpec",
+      "short": "OpenSpec",
+      "scope": "Default spec-driven schema; explore/propose/apply/archive, with optional verification",
+      "revision": "2500d6da971336167548b53731a35b2127df35ac",
+      "upstream": 1,
+      "downstream": 0,
+      "sdlc": 3,
+      "pdlc": 1,
+      "profile": [
+        "Partial",
+        "Partial",
+        "Gap",
+        "Partial",
+        "Supported",
+        "Gap",
+        "Gap"
+      ],
+      "verdict": "SDLC-focused",
+      "strength": "Proposals, behavioral scenarios and change archives keep implementation and a durable specification aligned. Optional verification checks completeness, correctness and coherence.",
+      "boundary": "Apply completes tasks; archive incorporates the change into long-lived specs. Verification is an additional workflow, and warnings do not necessarily block archiving.",
+      "gap": "The default artifacts explain why a change is wanted but do not require a product measurement or outcome decision after archive.",
+      "impact": "A coherent history of delivered changes can accumulate without showing which changes improved user outcomes.",
+      "repair": "Extend the change proposal with one outcome hypothesis and a linked post-adoption review; retain archive as the engineering record.",
+      "owner": "Product owner",
+      "proof": "An archived change points to evidence that led to scaling, revising or retiring the change.",
+      "sources": [
+        {
+          "label": "Default schema: proposal through apply",
+          "url": "https://github.com/Fission-AI/OpenSpec/blob/2500d6da971336167548b53731a35b2127df35ac/schemas%2Fspec-driven%2Fschema.yaml"
+        },
+        {
+          "label": "Workflow profiles and archive",
+          "url": "https://github.com/Fission-AI/OpenSpec/blob/2500d6da971336167548b53731a35b2127df35ac/docs%2Fworkflows.md"
+        },
+        {
+          "label": "Verify and archive behavior",
+          "url": "https://github.com/Fission-AI/OpenSpec/blob/2500d6da971336167548b53731a35b2127df35ac/docs%2Fcommands.md"
+        }
+      ],
+      "confidence": "High within inspected path",
+      "indicator_read": "Behavioral scenarios make software conformance observable. They do not by themselves define an adoption or value signal; the default proposal/spec artifacts have no required product-metric response contract.",
+      "table_strength": "Living specs and disciplined change",
+      "table_gap": "Archive does not establish user benefit"
+    },
+    {
+      "id": "E",
+      "name": "BMAD Method",
+      "short": "BMAD planned path",
+      "scope": "Selected product-brief/PRD/spec/build/retrospective path; not a claim about every quick task",
+      "revision": "8f2c13dd0e0073cad84168a679e5c553b2fb30b6",
+      "upstream": 2,
+      "downstream": 1,
+      "sdlc": 3,
+      "pdlc": 2,
+      "profile": [
+        "Supported",
+        "Partial",
+        "Partial",
+        "Partial",
+        "Supported",
+        "Partial",
+        "Partial"
+      ],
+      "verdict": "PDLC-aware; loop incomplete",
+      "strength": "Product briefs and PRDs connect user pain, business success, assumptions and measurable success. The PRD adds countermetrics and risk-sensitive rollout/operations topics; course correction supports human-approved replanning.",
+      "boundary": "Epic retrospectives inspect integrated behavior and delivery evidence, feeding corrective tickets and a next-epic decision. They do not by themselves require customer-value evidence after launch.",
+      "gap": "Measurement and rollout prompts are not consistently connected to a named owner, review window and product investment response.",
+      "impact": "A substantial planning and retrospective process can still judge success using delivery evidence while customer adoption remains unresolved.",
+      "repair": "Carry one PRD success metric and countermetric into an owned adoption pilot, then bring its result into the next investment decision.",
+      "owner": "Product manager",
+      "proof": "An outcome review changes the next epic or the investment based on customer evidence, not just build quality.",
+      "sources": [
+        {
+          "label": "Discovery and research instructions",
+          "url": "https://github.com/bmad-code-org/BMAD-METHOD/blob/8f2c13dd0e0073cad84168a679e5c553b2fb30b6/skills%2Fbmad-product-brief%2FSKILL.md"
+        },
+        {
+          "label": "Product brief template",
+          "url": "https://github.com/bmad-code-org/BMAD-METHOD/blob/8f2c13dd0e0073cad84168a679e5c553b2fb30b6/skills%2Fbmad-product-brief%2Fassets%2Fbrief-template.md"
+        },
+        {
+          "label": "PRD success metrics and risk adaptations",
+          "url": "https://github.com/bmad-code-org/BMAD-METHOD/blob/8f2c13dd0e0073cad84168a679e5c553b2fb30b6/skills%2Fbmad-prd%2Fassets%2Fprd-template.md"
+        },
+        {
+          "label": "Epic retrospective boundary",
+          "url": "https://github.com/bmad-code-org/BMAD-METHOD/blob/8f2c13dd0e0073cad84168a679e5c553b2fb30b6/docs%2Fbuild%2Ffinish-an-epic.md"
+        },
+        {
+          "label": "Human-approved course correction",
+          "url": "https://github.com/bmad-code-org/BMAD-METHOD/blob/8f2c13dd0e0073cad84168a679e5c553b2fb30b6/skills%2Fbmad-correct-course%2FSKILL.md"
+        }
+      ],
+      "confidence": "High within inspected path",
+      "indicator_read": "The PRD asks for primary and secondary success metrics, definitions, targets and countermetrics, with measurement detail scaled to stakes. It does not consistently connect them to an early learning window and an owner authorized to change the investment.",
+      "table_strength": "Product planning and delivery retrospectives",
+      "table_gap": "Customer evidence may not affect next investment"
+    },
+    {
+      "id": "F",
+      "name": "Compound Engineering \u2014 coding path",
+      "short": "Compound coding",
+      "scope": "Brainstorm/plan/work/review/compound; Strategy and Product Pulse not assumed configured",
+      "revision": "030188b4ba27f2dc33fbc4d5a112d3c8cc893e8c",
+      "upstream": 2,
+      "downstream": 1,
+      "sdlc": 4,
+      "pdlc": 1,
+      "profile": [
+        "Supported",
+        "Partial",
+        "Partial",
+        "Partial",
+        "Supported",
+        "Partial",
+        "Gap"
+      ],
+      "verdict": "SDLC-focused",
+      "strength": "A unified plan separates outcomes from implementation means, preserves requirements and verification, and carries review findings through fixes and explicit shipping checks.",
+      "boundary": "The inspected shipping contract ends with reviewed work and commit/PR. Operational considerations may enter the plan when material; engineering learning is captured separately.",
+      "gap": "An outcome-shaped objective does not automatically connect shipped work to adoption evidence and a product decision.",
+      "impact": "Teams can improve how they deliver each change while learning too little about which changes deserve continued investment.",
+      "repair": "Add an explicit product handoff to the plan; connect a configured Product Pulse to an owner who must respond.",
+      "owner": "Product lead",
+      "proof": "A shipped plan links to a signal review and a recorded change to product direction or scope.",
+      "sources": [
+        {
+          "label": "Unified plan: objective, product and verification contracts",
+          "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/030188b4ba27f2dc33fbc4d5a112d3c8cc893e8c/skills%2Fce-plan%2Freferences%2Fplan-sections.md"
+        },
+        {
+          "label": "Shipping: review, fixes and completion",
+          "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/030188b4ba27f2dc33fbc4d5a112d3c8cc893e8c/skills%2Fce-work%2Freferences%2Fshipping-workflow.md"
+        }
+      ],
+      "confidence": "High within inspected path",
+      "indicator_read": "The plan distinguishes a user-checkable outcome from implementation means and can add success criteria. Engineering verification demonstrates conformance; no required timely product-signal collection and response follows shipping.",
+      "table_strength": "Outcome intent, review and corrective delivery",
+      "table_gap": "Engineering learning can miss product learning"
+    },
+    {
+      "id": "F+",
+      "name": "Compound + Strategy / Product Pulse",
+      "short": "Compound + Strategy/Pulse",
+      "scope": "Optional strategy and analytics skills explicitly selected and configured alongside coding",
+      "revision": "030188b4ba27f2dc33fbc4d5a112d3c8cc893e8c",
+      "upstream": 2,
+      "downstream": 2,
+      "sdlc": 4,
+      "pdlc": 2,
+      "profile": [
+        "Supported",
+        "Partial",
+        "Partial",
+        "Partial",
+        "Supported",
+        "Partial",
+        "Partial"
+      ],
+      "verdict": "PDLC-aware; loop incomplete",
+      "strength": "Strategy supplies purpose, users, boundaries and metric sources. Product Pulse distinguishes engagement from value realization, queries real signals and can be scheduled when requested.",
+      "boundary": "The pulse produces a short report and follow-up questions. A metric report does not itself assign a threshold-based investment decision or adoption responsibility.",
+      "gap": "The evidence collection path is usable; the accountable interpretation and act-on-results path is incomplete.",
+      "impact": "More timely evidence may become another report unless someone is responsible for changing the bet when results disappoint.",
+      "repair": "Name a product decision owner, review cadence and response rules for the primary value signal, including inconclusive evidence.",
+      "owner": "Product sponsor",
+      "proof": "Two consecutive pulses lead to explicit continue, investigate, revise or stop decisions with follow-through.",
+      "sources": [
+        {
+          "label": "Strategy contract",
+          "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/030188b4ba27f2dc33fbc4d5a112d3c8cc893e8c/skills%2Fce-strategy%2FSKILL.md"
+        },
+        {
+          "label": "Strategy metric definitions",
+          "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/030188b4ba27f2dc33fbc4d5a112d3c8cc893e8c/skills%2Fce-strategy%2Freferences%2Fstrategy-template.md"
+        },
+        {
+          "label": "Pulse setup and activation",
+          "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/030188b4ba27f2dc33fbc4d5a112d3c8cc893e8c/skills%2Fce-product-pulse%2FSKILL.md"
+        },
+        {
+          "label": "Signal selection interview",
+          "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/030188b4ba27f2dc33fbc4d5a112d3c8cc893e8c/skills%2Fce-product-pulse%2Freferences%2Finterview.md"
+        },
+        {
+          "label": "Pulse outputs and follow-ups",
+          "url": "https://github.com/EveryInc/compound-engineering-plugin/blob/030188b4ba27f2dc33fbc4d5a112d3c8cc893e8c/skills%2Fce-product-pulse%2Freferences%2Frun.md"
+        }
+      ],
+      "confidence": "High within inspected path",
+      "indicator_read": "The Pulse interview distinguishes engagement from value realization and asks what would be actionable if a signal moves. Its configured queries and time window are substantial strengths. Baselines, response thresholds and an accountable product decision still need an explicit contract.",
+      "table_strength": "Strategy plus actual product-signal reporting",
+      "table_gap": "Reports lack an accountable decision response"
+    }
+  ],
+  "anchors": {
+    "Upstream": [
+      "0: No product framing in inspected scope",
+      "1: Problem/why and requirements framing",
+      "2: Repeatable outcome/option exploration; incomplete investment evidence",
+      "3: Structured discovery shapes a go/no-go or learning/delivery choice",
+      "4: Discovery, evidence thresholds and owned investment decisions form a complete linked contract"
+    ],
+    "Downstream": [
+      "0: Responsibility stops at engineering completion",
+      "1: Rollout/operations prompts or an ad hoc product-validation route",
+      "2: A concrete product-signal collection and review/reporting process",
+      "3: Adoption ownership plus triggered outcome decisions and routed follow-through",
+      "4: Recurring outcome decisions close the loop into subsequent investment and ongoing operation"
+    ],
+    "SDLC": [
+      "0: No delivery process established",
+      "1: Requirements or task guidance only",
+      "2: Linked requirements, implementation and basic checks",
+      "3: Structured execution plus acceptance/verification and change handling",
+      "4: Explicit corrective review/convergence loop with completion criteria"
+    ],
+    "PDLC": [
+      "0: No product intent established",
+      "1: Intent framing; delivery remains the completion boundary",
+      "2: Substantial discovery or product-evidence mechanisms; lifecycle links incomplete",
+      "3: Intent \u2192 signal \u2192 adoption owner \u2192 human outcome decision \u2192 next action is required",
+      "4: The complete contract recurs across investment, delivery and operation with learning routed forward"
+    ]
+  }
+}
