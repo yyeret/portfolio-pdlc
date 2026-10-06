@@ -1,6 +1,6 @@
 # Coding-agent configuration as a harness
 
-Assess **the effective instruction and tool path for one agent, working directory, and task class**. An instruction file alone is not the harness. Reconstruct the hierarchy, installed skills/plugins/commands, hooks/checks, and what actually triggers them. If possible, use the agent's own context/config inspection command to confirm loaded files without running a task. Treat hidden system instructions and model behavior as Unknown unless documented by the vendor.
+Assess **the effective instruction and tool path for one agent, working directory, and task class**. An instruction file alone is not the harness. Reconstruct the hierarchy, installed skills, plugins, and commands, hooks/checks, and what actually triggers them. If possible, use the agent's own context/config inspection command to confirm loaded files without running a task. Treat hidden system instructions and model behavior as Unknown unless documented by the vendor.
 
 | Layer | Question |
 |---|---|
