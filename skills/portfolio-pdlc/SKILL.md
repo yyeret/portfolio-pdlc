@@ -133,6 +133,7 @@ and they advance through the same stages as everything else: Explore (framing) â
 | A card is weak: activity-framed, unevidenced, no indicators, unclear risks | `portfolio-pdlc-strengthen` |
 | "How do we make the PDLC/portfolio itself better?" | `portfolio-pdlc-improve` |
 | What-if on WIP limits, topology change, arrival rate; derisk a big improvement bet | `portfolio-pdlc-simulate` |
+| Is a spec or spec-driven framework outcome-oriented and PDLC-ready? | `pdlc-readiness` (in this repo; standalone, no board required) |
 | Deep single-initiative diagnostic | `sniff-test` (in this repo) |
 | Board-level pattern read | `sniff-test-portfolio` (in this repo) |
 | No framing artifact, or the wrong one | `intent-framing-chooser` (in this repo) |

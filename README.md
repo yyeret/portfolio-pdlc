@@ -27,6 +27,7 @@ run it. The thinking behind it: [Scaling Product Orgs with Portfolio Agility](ht
 |---|---|
 | `skills/portfolio-pdlc/SKILL.md` | The operating system: workspace contract, one-move-per-cycle loop, leverage table |
 | `skills/portfolio-pdlc-wire/SKILL.md` | Turn whatever an org has (decks, exports, folders) into a wired portfolio workspace |
+| `skills/pdlc-readiness/SKILL.md` | Assess a spec or spec-driven framework: outcome intent, leading indicators, lifecycle coverage, and a visual executive brief |
 | `skills/portfolio-pdlc-assess/SKILL.md` | Stale-status sweep, outcome-vs-activity x-ray, flow + risk-balance read, review brief |
 | `skills/portfolio-pdlc-advance/SKILL.md` | Move ONE initiative toward its next decision; prepare (never make) the human call |
 | `skills/portfolio-pdlc-strengthen/SKILL.md` | Upgrade a card into a steering instrument: outcome hypothesis, leading indicators, evidence-tagged risks |
@@ -127,6 +128,19 @@ Then point your agent at a workflow of your own:
 
 Already have spec-kit, Kiro, a homegrown harness, or a tracker full of states? Start with
 `skills/flow-driven-ingest/SKILL.md` — it maps what exists before proposing anything.
+
+## Quickstart: is your spec-driven workflow PDLC-ready?
+
+Point your agent at a spec artifact, linked spec bundle, or framework repository:
+
+> Load `skills/pdlc-readiness/SKILL.md`. Assess <path> for a CTO deciding how to adopt spec-driven development. Save the Markdown and visual HTML brief in <output-folder>. Keep the assessed source read-only.
+
+Example: [framework comparison and executive evidence](docs/reviews/2026-10-05-spec-driven-framework-comparison.md), with [editable quadrant slides](docs/slides/2026-10-05-spec-driven-framework-quadrants.pptx). Covers Spec Kit, the Yuval PDLC fork, Kiro, OpenSpec, BMAD, and Compound Engineering; optional configurations are rated separately.
+
+The brief separates delivery strengths from product lifecycle gaps, shows where the
+workflow ends, and recommends up to three changes with their business consequences.
+It evaluates the inspected version, including local additions, rather than making a
+blanket claim about a framework brand. No portfolio workspace is required.
 
 ## Wiring a real portfolio
 
