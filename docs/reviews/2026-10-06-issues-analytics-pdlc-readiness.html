@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PDLC readiness — Issues Analytics plan</title><style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#172c38;background:#eff3f4;line-height:1.55}*{box-sizing:border-box}body{margin:0}main{max-width:1120px;margin:auto;padding:40px 28px}h1{font-size:clamp(2rem,5vw,3rem);line-height:1.12;margin:10px 0 18px}h2{font-size:1.35rem;margin:0 0 14px}h3{font-size:1.08rem;margin:0 0 8px}p{margin:0 0 12px}.eyebrow{font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;font-weight:750;color:#40616c}.verdict{font-size:1.25rem;font-weight:700}.scope,.muted{font-size:.9rem;color:#48616c}.hero{border-top:6px solid #00756f}.panel{background:white;border:1px solid #d4dfe2;border-radius:12px;padding:24px;margin-bottom:20px}.strip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin:22px 0 12px}.step{padding:12px 8px;border:1px solid #cbd8dc;border-radius:8px;font-size:.8rem}.step strong{display:block;margin-bottom:8px}.state{display:inline-block;border-radius:5px;padding:3px 7px;font-size:.75rem;font-weight:750}.supported{background:#d9f2e7;color:#07583b}.partial{background:#fff0c7;color:#6b4900}.gap{background:#fbe0dc;color:#8c2720}.unknown,.not-needed{background:#e9edf2;color:#374959}.columns{display:grid;grid-template-columns:1fr 1fr;gap:20px}.action{border-left:5px solid #00756f;background:#edf9f6;padding:16px;border-radius:6px}table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{text-align:left;vertical-align:top;padding:12px 8px;border-bottom:1px solid #dce5e7}th{color:#40616c;font-size:.78rem;text-transform:uppercase}td:first-child{width:23%;font-weight:650}.gap-card{border-top:1px solid #dce5e7;padding:20px 0 8px}.gap-card:first-of-type{border-top:0}a{color:#006d78;text-underline-offset:3px}p,td,li,a{overflow-wrap:anywhere}ul{padding-left:22px;margin:8px 0}li{margin-bottom:8px}.sources{font-size:.85rem}.number{font-size:.8rem;color:#40616c;letter-spacing:.06em}footer{font-size:.85rem;color:#48616c;margin:20px 0}@media(max-width:720px){main{padding:20px 14px}.panel{padding:18px}.strip{grid-template-columns:repeat(2,minmax(0,1fr))}.columns{grid-template-columns:1fr}thead{display:none}tbody,tr{display:block}tr{padding:12px 0;border-bottom:1px solid #dce5e7}td{display:block;border:0;padding:4px 0;font-size:.88rem}td:first-child{width:auto;font-weight:750}td:nth-child(2){padding-bottom:8px}.state{font-size:.75rem}}@media print{body{background:white}main{padding:0;max-width:none}.panel{border:0;border-radius:0;padding:12px 0}.hero{border-top:4px solid #00756f}.gap-card,tr{break-inside:avoid}a{color:inherit}.strip{grid-template-columns:repeat(7,minmax(0,1fr))}}
+
+section.panel{margin-bottom:22px}section.panel>h2{margin-bottom:16px}section.panel.benchmark{border-top:5px solid #00756f}section.panel.recommendations{border-left:5px solid #00756f}section.panel.sources{background:#f9fbfb}section.panel svg{display:block;width:100%;height:auto;margin:12px auto 18px}section.panel table{margin:16px 0}section.panel blockquote{margin:8px 0 16px;padding:5px 16px;border-left:3px solid #b8cbd0;color:#48616c}section.panel h3{margin:25px 0 10px}section.panel ul{margin:8px 0 16px}section.panel li{padding-left:3px}section.panel p{max-width:100ch}.hero p:first-of-type{font-size:1.25rem;font-weight:700}.hero p:nth-of-type(3){font-size:.9rem;color:#48616c}.scorecard td:nth-child(2){font-weight:800;color:#075f5c;white-space:nowrap}.recommendations table td:first-child{width:22%}@media(max-width:720px){section.panel svg{min-width:680px}.benchmark{overflow-x:auto}.scorecard td:nth-child(2){padding:0}}@media print{section.panel svg{max-width:100%}.benchmark{overflow:visible}}
+code.source-path{font-size:.84rem;overflow-wrap:anywhere;white-space:normal}</style></head><body><main>
+<section class="panel hero"><h1 id="pdlc-readiness--issues-analytics-plan">PDLC readiness — Issues Analytics plan</h1>
+<p><strong>SDLC-focused — clear product intent and strong delivery planning; completion stops before demonstrated user value.</strong></p>
+<p>The written contract carries work through implementation, automated checks, a local browser check, and a latency comparison. It assigns no recipient or trigger for adoption and outcome review. The /goal loop stops at technical completion. [<a href="#E1">E1</a>]</p>
+<p>Black-box artifact assessment · 6 October 2026 · provisional Plan/Commit → Deliver · high confidence in the written completion boundary; medium confidence in wider lifecycle coverage. The plan identifies <code>ce-unified-plan/v1</code> and <code>ce-brainstorm</code> as its producing contract and source. Harness scores below describe what <strong>this output demonstrates</strong>, not the capabilities of Compound Engineering as a whole or actual team practice. [<a href="#E1">E1</a>, <a href="#E2">E2</a>]</p>
+</section>
+<section class="panel benchmark"><h2 id="visual-benchmark--output-and-outcome-strength">Visual benchmark — output and outcome strength</h2>
+<p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 740" role="img" aria-labelledby="title desc">
+  <title id="title">Issues Analytics spec compared with documented spec-driven workflow configurations</title>
+  <desc id="desc">Output strength is 3 of 4 and outcome strength is 1 of 4 for the assessed spec. Background benchmark configurations occupy output bands 3 and 4 and outcome bands 1 and 2. These are qualitative evidence bands, not performance measurements.</desc>
+  <style>
+    text{font-family:system-ui,-apple-system,Segoe UI,sans-serif;fill:#183340} .small{font-size:16px;fill:#52636d}.axis{font-size:20px;font-weight:700}.tick{font-size:14px;fill:#52636d}.group{font-size:15px;fill:#61727c}.quad{font-size:17px;font-weight:700;fill:#8b9ca5}.headline{font-size:28px;font-weight:800}.spec{font-size:21px;font-weight:800;fill:#075f5c}.note{font-size:15px;fill:#405761}
+  </style>
+  <rect width="1080" height="740" fill="#fff"/>
+  <text class="headline" x="42" y="40">Output strength × outcome strength</text>
+  <rect x="170" y="60" width="560" height="400" fill="#f7f9fa" stroke="#bfcdd1"/>
+  <rect x="520" y="60" width="210" height="150" fill="#edf5f1"/>
+  <rect x="170" y="210" width="350" height="250" fill="#f2f5f6"/>
+  <path d="M170 110H730 M170 210H730 M170 310H730 M170 410H730 M310 60V460 M450 60V460 M590 60V460" stroke="#d8e2e5"/>
+  <path d="M520 60V460 M170 210H730" stroke="#92a6ac" stroke-width="2" stroke-dasharray="8 7"/>
+  <text class="quad" x="185" y="86">Learning-led, lighter delivery</text>
+  <text class="quad" x="535" y="86">End-to-end PDLC</text>
+  <text class="quad" x="185" y="442">Early product framing</text>
+  <text class="quad" x="535" y="442">Strong delivery, weak outcome loop</text>
+  <path d="M170 460H730 M170 460V60" stroke="#334e59" stroke-width="2"/>
+  <text class="tick" x="170" y="483" text-anchor="middle">0</text><text class="tick" x="310" y="483" text-anchor="middle">1</text><text class="tick" x="450" y="483" text-anchor="middle">2</text><text class="tick" x="590" y="483" text-anchor="middle">3</text><text class="tick" x="730" y="483" text-anchor="middle">4</text>
+  <text class="tick" x="150" y="465" text-anchor="end">0</text><text class="tick" x="150" y="365" text-anchor="end">1</text><text class="tick" x="150" y="265" text-anchor="end">2</text><text class="tick" x="150" y="165" text-anchor="end">3</text><text class="tick" x="150" y="65" text-anchor="end">4</text>
+  <text class="axis" x="450" y="521" text-anchor="middle">Output strength →</text>
+  <text class="small" x="450" y="546" text-anchor="middle">From requirements and checks to corrective delivery</text>
+  <text class="axis" transform="translate(35 260) rotate(-90)" text-anchor="middle">Outcome strength →</text>
+  <circle cx="730" cy="360" r="9" fill="#9cabb1"/><text class="group" x="755" y="350">Spec Kit core</text><text class="group" x="755" y="370">Compound coding</text>
+  <circle cx="730" cy="260" r="9" fill="#9cabb1"/><text class="group" x="755" y="250">Spec Kit + Assess</text><text class="group" x="755" y="270">Compound + Strategy/Pulse</text>
+  <circle cx="590" cy="260" r="9" fill="#9cabb1"/><text class="group" x="570" y="247" text-anchor="end">BMAD · Yuval PDLC fork</text>
+  <circle cx="590" cy="360" r="9" fill="#9cabb1"/><text class="group" x="620" y="395">Kiro · OpenSpec</text>
+  <circle cx="590" cy="360" r="21" fill="#fff" stroke="#00756f" stroke-width="5"/>
+  <path d="M590 345l4.4 10.6 11.5.9-8.8 7.4 2.7 11.1-9.8-6-9.8 6 2.7-11.1-8.8-7.4 11.5-.9z" fill="#00756f"/>
+  <rect x="298" y="570" width="430" height="70" rx="10" fill="#e9f7f3" stroke="#98c8bb"/>
+  <text class="spec" x="317" y="599">This spec: Output 3 / Outcome 1</text>
+  <text class="note" x="317" y="623">Strong plan; user-value review has no owner or trigger</text>
+  <text class="note" x="42" y="679">Background: eight documented workflow configurations assessed 5 Oct 2026.</text>
+  <text class="note" x="42" y="703">This point assesses one produced artifact, not its entire harness; placements are ordinal and provisional.</text>
+</svg>
+</p>
+<p><strong>This spec: Output 3/4 · Outcome 1/4 (provisional).</strong> Output 3 means structured requirements, implementation units, and verification, but no explicit corrective convergence cycle. Outcome 1 means product intent is visible, while the written completion boundary remains technical delivery. These are <strong>ordinal evidence bands</strong>, not a maturity percentage. [<a href="#E1">E1</a>, <a href="#E2">E2</a>, <a href="#E3">E3</a>]</p>
+<p>The gray points reuse the <a href="2026-10-05-framework-comparison-data.json">5 October framework comparison</a>: Spec Kit core and Compound coding (4,1); Spec Kit + Assess and Compound + Strategy/Pulse (4,2); BMAD and the Yuval PDLC fork (3,2); Kiro and OpenSpec (3,1). Optional configurations are shown separately. They are benchmark context from inspected framework paths; the foreground point is one produced spec, so this is not a controlled, like-for-like ranking or a verdict on the producing harness. The dividing line is between bands 2 and 3; none of the inspected paths had a complete outcome loop. [<a href="#B1">B1</a>]</p>
+</section>
+<section class="panel"><h2 id="lifecycle-and-strengths">Lifecycle and strengths</h2>
+<p>Explore: <strong>Supported</strong> | Discover: <strong>Partial</strong> | Commit: <strong>Partial</strong> | Deliver: <strong>Supported</strong> | Adopt: <strong>Gap</strong> | Review outcomes: <strong>Gap</strong> | Adapt &amp; operate: <strong>Gap</strong></p>
+<p>Explore maps to intent; Discover to assumptions; Commit and Deliver to their matching dimensions. Adopt maps to adoption; Adapt &amp; operate combines the missing operating and outcome-response contracts. No return from real-use evidence to Explore/Discover is specified. Supported means documented support, not executed success.</p>
+<p><strong>Keep</strong></p>
+<ul>
+<li><p>Concrete problem: PR-linked issue data excludes unresolved and unlinked demand; the proposed scope addresses that blind spot. [<a href="#E2">E2</a>, <a href="#E6">E6</a>]</p></li>
+<li><p>Requirements map to acceptance examples and implementation units, with regression, fail-soft, browser, and latency checks. These are planned checks, not passing results. [<a href="#E1">E1</a>, <a href="#E3">E3</a>]</p></li>
+<li><p>Explicit scope choices, sample-limit warnings, and reuse of the existing app keep the feature bounded. [<a href="#E2">E2</a>, <a href="#E4">E4</a>]</p></li>
+</ul>
+<p>The leadership question is whether the producing workflow would reliably ask for and carry those missing product decisions into the next spec. One output can reveal a failure mode, but cannot establish its frequency or root cause.</p>
+</section>
+<section class="panel scorecard"><h2 id="producing-harness-yield-scorecard">Producing-harness yield scorecard</h2>
+<table>
+<thead>
+<tr>
+<th>What this output tests</th>
+<th style="text-align: right;">Demonstrated score</th>
+<th>Black-box evidence and implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intent carried into the plan</td>
+<td style="text-align: right;">2/2</td>
+<td>A concrete user capability and problem survive into scope and requirements. Preserve this behavior. [<a href="#E2">E2</a>]</td>
+</tr>
+<tr>
+<td>Decision-relevant learning signal</td>
+<td style="text-align: right;">1/2</td>
+<td>The three named “leading indicators” test data, tests, and latency; none observes whether a user makes a better backlog decision. [<a href="#E3">E3</a>]</td>
+</tr>
+<tr>
+<td>Adoption and operating handoff</td>
+<td style="text-align: right;">0/2</td>
+<td>No pilot recipient, access/support owner, or first-use trigger appears in the completion contract. [<a href="#E1">E1</a>, <a href="#E7">E7</a>]</td>
+</tr>
+<tr>
+<td>Outcome decision and feedback</td>
+<td style="text-align: right;">0/2</td>
+<td>The /goal loop stops when implementation checks pass, with no real-use review or route back into scope. [<a href="#E1">E1</a>]</td>
+</tr>
+<tr>
+<td>Delivery execution and verification</td>
+<td style="text-align: right;">2/2</td>
+<td>Requirements, units, acceptance examples, and checks are linked; an R2/deferred-scope conflict still needs repair. [<a href="#E1">E1</a>, <a href="#E5">E5</a>]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How to read the score:</strong> 0 = no demonstrated contract, 1 = partial, 2 = explicit and connected in this output. This is a <em>yield profile</em>, not a score of the underlying tool, team, or every plan it produces. Confidence is high for the observed output and low for whether the omissions are systemic. A sample of additional outputs and the actual harness instructions would resolve that uncertainty.</p>
+</section>
+<section class="panel"><h2 id="dimension-profile">Dimension profile</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>State</th>
+<th>Evidence and interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intent and outcome</td>
+<td>Supported</td>
+<td>A user capability and the missing-demand problem are explicit; scope is bounded. The first pilot cohort still needs naming. [<a href="#E2">E2</a>]</td>
+</tr>
+<tr>
+<td>Assumptions and discovery</td>
+<td>Partial</td>
+<td>Technical assumptions and one reported API probe exist; no probe tests whether the displayed evidence supports a useful user decision. Probe results were not supplied. [<a href="#E4">E4</a>]</td>
+</tr>
+<tr>
+<td>Leading indicators</td>
+<td>Partial</td>
+<td>Payload completeness, tests, and latency support delivery confidence; no user-task signal has an owner and response rule. [<a href="#E3">E3</a>]</td>
+</tr>
+<tr>
+<td>Commitment and decisions</td>
+<td>Partial</td>
+<td>User-directed scope decisions are recorded. A responsible human and evidence trigger for continue/revise/stop are unspecified. [<a href="#E2">E2</a>, <a href="#E1">E1</a>]</td>
+</tr>
+<tr>
+<td>Delivery and verification</td>
+<td>Supported</td>
+<td>Requirement-to-unit traceability and explicit verification support implementation. Resolve the refresh-scope inconsistency before treating every requirement as covered. [<a href="#E1">E1</a>, <a href="#E5">E5</a>]</td>
+</tr>
+<tr>
+<td>Adoption and operation</td>
+<td>Gap</td>
+<td>The inspected completion contract has no pilot recipient, release/access handoff, support owner, or ongoing issue-data failure review. [<a href="#E1">E1</a>, <a href="#E7">E7</a>]</td>
+</tr>
+<tr>
+<td>Outcome review and adaptation</td>
+<td>Gap</td>
+<td>The loop terminates on technical success; no real-use evidence review routes a human decision back into work. [<a href="#E1">E1</a>, <a href="#E7">E7</a>]</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="panel recommendations"><h2 id="1-recommendations-for-this-spec">1. Recommendations for this spec</h2>
+<h3 id="1-close-the-responsibility-gap-after-delivery">1. Close the responsibility gap after delivery</h3>
+<p>The live-app scope is clear, but the Definition of Done and loop specify no user handoff or subsequent review. The earlier web-app plan also ends at functional verification. [<a href="#E1">E1</a>, <a href="#E7">E7</a>]</p>
+<p><strong>Plausible consequence:</strong> The feature could work and still go unused, with nobody responsible for discovering that.</p>
+<p><strong>Smallest repair:</strong> Extend the existing completion contract with pilot access, one responsible human, a first-use review, and keep/revise/stop routing. A separate rollout programme is unnecessary for this bounded feature.</p>
+<p>Proposed product owner: Yuval or a delegate. Proof: a dated review records an actual user decision, limitations, and the resulting next action.</p>
+<h3 id="2-test-the-capability-the-user-is-buying">2. Test the capability the user is buying</h3>
+<p>Twenty populated weeks, named tests, and acceptable latency do not establish that someone can interpret backlog health. The plan supplies no observed user-task evidence. [<a href="#E2">E2</a>, <a href="#E3">E3</a>]</p>
+<p><strong>Plausible consequence:</strong> A technically green dashboard could produce confident but unhelpful backlog advice.</p>
+<p><strong>Smallest repair:</strong> Use one thin working slice in a real backlog review. Compare the user’s assessment with the current PR-only view; record what additional evidence changed or confirmed the decision and whether the user understood its limits.</p>
+<p>Proposed pilot owner: product owner with one intended user. Proof: an observed task and decision record, reviewed before extending feature scope. This is a proposed learning contract, not an agreed target.</p>
+<h3 id="3-establish-what-the-measurements-can-support">3. Establish what the measurements can support</h3>
+<p>The plan acknowledges capped samples, but pairs them with a fixed 20-week target and “full stale count.” Its stale definition is comment inactivity, and its objective says “never gets resolved.” These limits are not carried explicitly into U4’s chat-context contract. [<a href="#E2">E2</a>, <a href="#E3">E3</a>, <a href="#E4">E4</a>]</p>
+<p><strong>Plausible consequence:</strong> Users could mistake a partial count or a finite observation window for a complete diagnosis. No misleading result has been observed in this assessment.</p>
+<p><strong>Smallest repair:</strong> Before the pilot, record actual coverage and latency on the target repo; define sampled versus complete counts and “still unresolved as of” language; pass the same limitations to charts and chat. If 20 reliable weeks are unavailable, the human owner chooses wider collection or a narrower claim.</p>
+<p>Proposed owners: implementer supplies evidence; product owner accepts the claim. Proof: the pilot report and chat answer expose the same observation window and limitations.</p>
+</section>
+<section class="panel recommendations"><h2 id="2-prioritized-improvements-to-the-producing-spec-driven-harness">2. Prioritized improvements to the producing spec-driven harness</h2>
+<p>These are <strong>change hypotheses for the workflow that produced this plan</strong>, inferred from its black-box output. They do not claim that Compound Engineering lacks these capabilities. First inspect the local <code>ce-unified-plan/v1</code> instructions and any linked product process; if an existing step already supplies a contract, connect it rather than duplicate it. [<a href="#E1">E1</a>, <a href="#E2">E2</a>]</p>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Harness yield now</th>
+<th>Recommended change</th>
+<th>Why it matters / proof on the next run</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P1 — Require an owned post-delivery handoff</strong></td>
+<td>Adoption 0/2; outcome response 0/2</td>
+<td>Make every material plan name the recipient, first-use or release trigger, review owner, evidence window, and human keep/revise/stop decision, or link to an existing process that does. The /goal completion text should hand off responsibility rather than imply that green checks close the product bet.</td>
+<td>Highest impact: this output can reach “done” before anyone checks user value. A subsequent plan should contain an explicit handoff that remains traceable through delivery; a dated pilot review should show the decision. [<a href="#E1">E1</a>, <a href="#E7">E7</a>]</td>
+</tr>
+<tr>
+<td><strong>P2 — Separate learning signals from delivery checks</strong></td>
+<td>Learning signal 1/2</td>
+<td>Keep technical checks, but require one decision-relevant user or beneficiary signal, its baseline/probe, observation window, interpretation rule, and accountable response. Label tests, payload counts, and latency as delivery evidence or guardrails unless a causal link is argued.</td>
+<td>Prevents an impressive indicator list from substituting for product learning. The next comparable plan should explain which observed behavior could change the investment decision and when. [<a href="#E2">E2</a>, <a href="#E3">E3</a>]</td>
+</tr>
+<tr>
+<td><strong>P3 — Check claim integrity before plan closure</strong></td>
+<td>Delivery 2/2, with a scope conflict</td>
+<td>Add a final cross-check among requirements, deferrals, sample limits, UI/chat claims, and verification. Route unresolved contradictions to a human choice before execution.</td>
+<td>Lower confidence as a systemic issue from one artifact, but the R2 contradiction and “full” versus capped counts could mislead implementation or users. Proof is a resolved scope statement and consistent coverage language across the next plan's surfaces. [<a href="#E4">E4</a>, <a href="#E5">E5</a>]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Validation of the harness change:</strong> after editing the workflow, assess three newly produced material specs using the same yield profile. Look for owned handoffs and decision-ready signals in the outputs, not merely new template headings. Review exceptions for low-risk work explicitly. Until then, the priority order is a recommendation based on this one plan and its earlier web-app context, not a measured defect rate. [<a href="#E1">E1</a>, <a href="#E7">E7</a>]</p>
+</section>
+<section class="panel"><h2 id="indicator-read">Indicator read</h2>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Role</th>
+<th>What it supports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>≥20 weekly points; non-null R3–R7</td>
+<td>Delivery/data-quality proxy</td>
+<td>Tests availability, not completeness, representativeness, or interpretation. The capped sample may shorten the usable window; feasibility of 20 weeks remains unverified. [<a href="#E3">E3</a>, <a href="#E4">E4</a>]</td>
+</tr>
+<tr>
+<td>AE1–AE3 named tests pass</td>
+<td>Delivery/quality</td>
+<td>Useful evidence of specified arithmetic and behavior; no evidence of user decision quality. [<a href="#E3">E3</a>]</td>
+</tr>
+<tr>
+<td>Analyze time increases ≤15 seconds</td>
+<td>Performance guardrail</td>
+<td>A relevant usability constraint with a same-repo baseline procedure, but no measured baseline/result supplied. [<a href="#E3">E3</a>]</td>
+</tr>
+</tbody>
+</table>
+<p>Proposed primary learning signal: at the first pilot backlog review, can the intended user identify whether observed demand exceeds resolutions, select an evidence-backed next action, and state the data limitations? Record performance on the current view first. The product owner reviews the observed task immediately: continue if the evidence supports the decision; revise if interpretation fails; gather more evidence if inconclusive. Retain latency and correctness checks as guardrails. A single-user pilot is directional evidence, not adoption proof.</p>
+<p>The dashboard’s cycle time, arrival/resolution, age, and stale metrics are product content. Their presence alone does not measure whether this feature helps its users. No revenue proxy or enterprise portfolio ceremony is required.</p>
+</section>
+<section class="panel sources"><h2 id="evidence-and-limits">Evidence and limits</h2>
+<ul>
+<li><p>Input snapshot: github-analytics HEAD 06b579ed8a28739e09e0da0ee464d59fc8c13318, branch claude/workflows-issues-analytics-eb07e9; docs/ untracked. Plan SHA-256: d2a58959a941cdd49ee79684372efc2d30b149c56cdd5768f446025bd3757465.</p></li>
+<li><p>Stage is provisional: implementation units name new files, the inspected checkout has no issues.py or issue tests, and no execution evidence was supplied. No claim is made about other branches or deployed environments.</p></li>
+<li><p>Coverage: full target plan; README; earlier web-app plan; selected analyze.py and app.py passages. No linked adoption/review document is named. The ce-brainstorm source and underlying user conversation/API-probe record were not available in this snapshot: their evidence is Unknown, not disproven.</p></li>
+<li><p>The R2 force-refresh requirement conflicts with its explicit web-path deferral. Existing app.py:89–93 always calls collect_data. Clarify the intended scope; this assessment does not prescribe a cache redesign. [<a href="#E5">E5</a>]</p></li>
+<li><p>No live GitHub calls, app execution, implementation tests, user study, or external process audit were performed. Future-stage gaps concern missing ownership/trigger contracts, not a demand for pre-launch outcome results.</p></li>
+<li><p>Skill: pdlc-readiness v1.0.0 for the original artifact read; v1.1.0 adds black-box harness hypotheses and benchmark context. This is not a repository audit of the producing framework.</p></li>
+<li><p><strong id="B1">B1</strong> — <a href="2026-10-05-framework-comparison-data.json">Framework comparison data, 5 October 2026</a>, <code>sdlc</code> and <code>pdlc</code> ordinal bands; anchors and limitations in <a href="../../skills/pdlc-readiness/references/comparisons.md">comparison method</a>. The eight positions are unchanged from that assessment.</p></li>
+<li><p><strong id="E1">E1</strong> — <code class="source-path">/Users/yuvalyeret/Github/github-analytics/.claude/worktrees/workflows-issues-analytics-eb07e9/docs/plans/2026-10-06-0619-feat-issues-analytics-plan.md:199</code>, Verification Contract; Definition of Done; Suggested /goal Loop Prompt. Excerpt: “Stop when all three hold and the Definition of Done is met”.</p></li>
+<li><p><strong id="E2">E2</strong> — <code class="source-path">/Users/yuvalyeret/Github/github-analytics/.claude/worktrees/workflows-issues-analytics-eb07e9/docs/plans/2026-10-06-0619-feat-issues-analytics-plan.md:13</code>, Goal Capsule; Problem Frame; Key Decisions; Product Contract. Excerpt: “A user analyzing a repo can see whether its issue backlog is healthy”.</p></li>
+<li><p><strong id="E3">E3</strong> — <code class="source-path">/Users/yuvalyeret/Github/github-analytics/.claude/worktrees/workflows-issues-analytics-eb07e9/docs/plans/2026-10-06-0619-feat-issues-analytics-plan.md:19</code>, Leading indicators (measurement procedures at lines 199–208). Excerpt: “at least 20 weekly points and no null R3-R7 fields”.</p></li>
+<li><p><strong id="E4">E4</strong> — <code class="source-path">/Users/yuvalyeret/Github/github-analytics/.claude/worktrees/workflows-issues-analytics-eb07e9/docs/plans/2026-10-06-0619-feat-issues-analytics-plan.md:86</code>, KTD2–KTD7; Assumptions; Risks (chat consumer at lines 175–184). Excerpt: “The payload carries the full stale count and the 25 oldest items.”.</p></li>
+<li><p><strong id="E5">E5</strong> — <code class="source-path">/Users/yuvalyeret/Github/github-analytics/.claude/worktrees/workflows-issues-analytics-eb07e9/docs/plans/2026-10-06-0619-feat-issues-analytics-plan.md:49</code>, R2 versus Deferred to Follow-Up Work; corroborated by app.py:89–93. Excerpt: “Honoring <code>force_refresh</code> in the web app path”.</p></li>
+<li><p><strong id="E6">E6</strong> — <code class="source-path">/Users/yuvalyeret/Github/github-analytics/.claude/worktrees/workflows-issues-analytics-eb07e9/analyze.py:452</code>, Existing issue linkage; compute_flow_metrics at lines 533–564. Excerpt: “closingIssuesReferences”.</p></li>
+<li><p><strong id="E7">E7</strong> — <code class="source-path">/Users/yuvalyeret/Github/github-analytics/.claude/worktrees/workflows-issues-analytics-eb07e9/converting-github-analytics-to-a-live-web-app-implementation-plan.md:1</code>, Earlier web-app plan, Verification Plan; README reviewed for parent context. Excerpt: “Manual Verification”.</p></li>
+</ul>
+</section>
+<section class="panel"><h2 id="next-decision">Next decision</h2>
+<p>Recommendation: update the producing plan contract so a bounded pilot and owned outcome review are a visible handoff, then repair this spec before treating the feature as a completed product bet. Proposed decision owner: Yuval or a designated product owner. Improvement is demonstrated when the next generated plans carry that contract and real use produces a recorded backlog decision with a keep/revise/stop response. No implementation or workflow decision is authorized by this assessment.</p>
+</section>
+<footer>Assessment of documented support and one black-box output; not certification or proof of achieved outcomes.</footer></main></body></html>
