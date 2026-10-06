@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 740" role="img" aria-labelledby="title desc">
+  <title id="title">Issues Analytics spec compared with documented spec-driven workflow configurations</title>
+  <desc id="desc">Output strength is 3 of 4 and outcome strength is 1 of 4 for the assessed spec. Background benchmark configurations occupy output bands 3 and 4 and outcome bands 1 and 2. These are qualitative evidence bands, not performance measurements.</desc>
+  <style>
+    text{font-family:system-ui,-apple-system,Segoe UI,sans-serif;fill:#183340} .small{font-size:16px;fill:#52636d}.axis{font-size:20px;font-weight:700}.tick{font-size:14px;fill:#52636d}.group{font-size:15px;fill:#61727c}.quad{font-size:17px;font-weight:700;fill:#8b9ca5}.headline{font-size:28px;font-weight:800}.spec{font-size:21px;font-weight:800;fill:#075f5c}.note{font-size:15px;fill:#405761}
+  </style>
+  <rect width="1080" height="740" fill="#fff"/>
+  <text class="headline" x="42" y="40">Output strength × outcome strength</text>
+  <rect x="170" y="60" width="560" height="400" fill="#f7f9fa" stroke="#bfcdd1"/>
+  <rect x="520" y="60" width="210" height="150" fill="#edf5f1"/>
+  <rect x="170" y="210" width="350" height="250" fill="#f2f5f6"/>
+  <path d="M170 110H730 M170 210H730 M170 310H730 M170 410H730 M310 60V460 M450 60V460 M590 60V460" stroke="#d8e2e5"/>
+  <path d="M520 60V460 M170 210H730" stroke="#92a6ac" stroke-width="2" stroke-dasharray="8 7"/>
+  <text class="quad" x="185" y="86">Learning-led, lighter delivery</text>
+  <text class="quad" x="535" y="86">End-to-end PDLC</text>
+  <text class="quad" x="185" y="442">Early product framing</text>
+  <text class="quad" x="535" y="442">Strong delivery, weak outcome loop</text>
+  <path d="M170 460H730 M170 460V60" stroke="#334e59" stroke-width="2"/>
+  <text class="tick" x="170" y="483" text-anchor="middle">0</text><text class="tick" x="310" y="483" text-anchor="middle">1</text><text class="tick" x="450" y="483" text-anchor="middle">2</text><text class="tick" x="590" y="483" text-anchor="middle">3</text><text class="tick" x="730" y="483" text-anchor="middle">4</text>
+  <text class="tick" x="150" y="465" text-anchor="end">0</text><text class="tick" x="150" y="365" text-anchor="end">1</text><text class="tick" x="150" y="265" text-anchor="end">2</text><text class="tick" x="150" y="165" text-anchor="end">3</text><text class="tick" x="150" y="65" text-anchor="end">4</text>
+  <text class="axis" x="450" y="521" text-anchor="middle">Output strength →</text>
+  <text class="small" x="450" y="546" text-anchor="middle">From requirements and checks to corrective delivery</text>
+  <text class="axis" transform="translate(35 260) rotate(-90)" text-anchor="middle">Outcome strength →</text>
+  <circle cx="730" cy="360" r="9" fill="#9cabb1"/><text class="group" x="755" y="350">Spec Kit core</text><text class="group" x="755" y="370">Compound coding</text>
+  <circle cx="730" cy="260" r="9" fill="#9cabb1"/><text class="group" x="755" y="250">Spec Kit + Assess</text><text class="group" x="755" y="270">Compound + Strategy/Pulse</text>
+  <circle cx="590" cy="260" r="9" fill="#9cabb1"/><text class="group" x="570" y="247" text-anchor="end">BMAD · Yuval PDLC fork</text>
+  <circle cx="590" cy="360" r="9" fill="#9cabb1"/><text class="group" x="620" y="395">Kiro · OpenSpec</text>
+  <circle cx="590" cy="360" r="21" fill="#fff" stroke="#00756f" stroke-width="5"/>
+  <path d="M590 345l4.4 10.6 11.5.9-8.8 7.4 2.7 11.1-9.8-6-9.8 6 2.7-11.1-8.8-7.4 11.5-.9z" fill="#00756f"/>
+  <rect x="298" y="570" width="430" height="70" rx="10" fill="#e9f7f3" stroke="#98c8bb"/>
+  <text class="spec" x="317" y="599">This spec: Output 3 / Outcome 1</text>
+  <text class="note" x="317" y="623">Strong plan; user-value review has no owner or trigger</text>
+  <text class="note" x="42" y="679">Background: eight documented workflow configurations assessed 5 Oct 2026.</text>
+  <text class="note" x="42" y="703">This point assesses one produced artifact, not its entire harness; placements are ordinal and provisional.</text>
+</svg>

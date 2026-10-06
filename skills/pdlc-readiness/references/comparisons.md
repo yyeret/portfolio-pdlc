@@ -14,6 +14,8 @@ Use only when a comparison or quadrant view is requested. The unit of comparison
 
 Use horizontal Upstream / vertical Downstream, and horizontal SDLC / vertical PDLC. Label axes and direction explicitly. Use these ordinal anchors rather than fabricated continuous scores. The dividing line sits between bands 2 and 3. Plot integer bands exactly; group ties instead of jittering points. Optional configurations need distinct labels/markers. Never average these bands into a maturity percentage. Use Unknown instead of plotting a point when evidence cannot establish a band.
 
+For a *produced-spec* benchmark, relabel the second view **Output strength → / Outcome strength ↑** and apply the same SDLC/PDLC 0–4 anchors to the artifact's demonstrated contract. Clearly highlight the assessed spec. Framework configurations may sit behind it only as sourced, dated context and must remain visually distinct: they describe documented workflow capability, whereas the foreground point describes one output. Explain ties at the same coordinate; do not jitter. Do not call relative placement a controlled comparison, market ranking, or framework verdict. If no existing compatible benchmark is available, chart the artifact alone.
+
 ### Upstream
 
 - 0: No product framing in inspected scope

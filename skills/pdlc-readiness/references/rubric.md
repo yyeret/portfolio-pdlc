@@ -66,3 +66,17 @@ Report the full dimension profile; an excellent delivery score cannot cancel a m
 For framework distributions with independent optional workflows, state which path the verdict covers. Credit an optional route separately, including any stronger human decision or discovery support. A default-path rating must not erase available capability; an available extension must not silently upgrade the default path.
 
 For mixed inputs (framework plus produced spec), rate them separately. Do not generalize one artifact's omissions to every framework user, or infer actual practice from the framework's potential.
+
+## Black-box harness yield from a produced spec
+
+When the assessment is intended to improve the *producing harness*, keep the seven-dimension artifact profile above and add this small yield scorecard. It describes what one output demonstrates, not the capabilities or defect rate of the underlying framework. Score each control independently; never sum or average them into a readiness percentage.
+
+| Control | 0 — not demonstrated | 1 — partial | 2 — explicit and connected |
+|---|---|---|---|
+| Intent carried into the plan | No beneficiary problem or intended change | Product language exists but does not govern scope | Beneficiary problem, observable change, and boundaries shape requirements |
+| Decision-relevant learning signal | Only outputs/activity/technical checks | A plausible product signal exists without a usable definition or response | Signal tests an assumption, has a collection/interpretation plan, and can change a decision |
+| Adoption and operating handoff | No recipient, trigger, or operating owner | Rollout/support mentioned without accountable handoff | Recipient, access/use trigger, and proportionate ownership or linked external process are clear |
+| Outcome decision and feedback | Work ends at engineering completion | Outcome review is suggested but not routed to a decision | Owner, review timing/evidence, human response, and route into next work are explicit |
+| Delivery execution and verification | No implementation/acceptance path | Tasks or tests exist without end-to-end trace | Requirements, units, acceptance evidence, and completion checks are linked |
+
+Use the lowest score supported by the inspected output. A justified stage exception is **Not yet due**, not 0; identify the later handoff or decision contract if present. Distinguish evidence confidence for the *output* from confidence that the gap is *systemic in the harness*. A single output commonly supports high confidence in what it says and low confidence in frequency or cause. The harness improvement is a hypothesis to test against its local instructions and at least a few newly produced specs. If the harness already requires a missing element, investigate why this run omitted it rather than prescribing a duplicate template field.
