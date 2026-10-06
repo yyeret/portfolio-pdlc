@@ -1,9 +1,9 @@
 ---
 name: pdlc-readiness
-description: Assess a produced spec or spec-driven workflow for outcome orientation and end-to-end product lifecycle readiness. Use when a CTO, VPE, or AI adoption leader wants to inspect and adapt a spec-driven harness using its specs as black-box outputs, distinguish spec repairs from reusable workflow improvements, or benchmark output versus outcome strength. Produces an evidence-backed visual executive brief. Read-only toward assessed material; not a code-quality audit or live portfolio assessment.
+description: Assess a produced spec or spec bundle as black-box evidence of outcome orientation and PDLC readiness. Use when a CTO, VPE, or AI adoption leader wants to improve a spec-driven harness from its outputs, separating current-spec repairs from reusable workflow changes. For white-box inspection of a harness repository or agent configuration, use pdlc-harness-readiness.
 metadata:
   tags: product-strategy, sdd-process, flow-agile
-  version: 1.1.0
+  version: 1.1.1
 ---
 
 # PDLC Readiness
@@ -39,6 +39,8 @@ Infer the mode from the input:
 
 - **Artifact / black-box harness feedback:** a finished or draft spec, plan, canvas, or linked bundle. Read its declared stage and linked decision, measurement, release, and operating artifacts where available. Identify the producing workflow only when the artifact names it. State whether assessing one file or the full bundle. Default to this mode for a supplied spec; the primary decision is how to adapt its producing harness.
 - **Framework:** a repo of commands, skills, templates, rules, and workflow wiring. Trace the default path and meaningful conditional paths from entry through completion. Inspect enabled extensions when assessing an installation; distinguish optional capabilities when assessing a source distribution.
+
+For a new white-box harness or coding-agent-configuration request, use [pdlc-harness-readiness](../pdlc-harness-readiness/SKILL.md). The framework mode below remains to interpret earlier comparison reports; the dedicated skill adds source intake, effective configuration, trustworthy delivery, and compounding analysis.
 
 For multi-framework tables or quadrant diagrams, also read [references/comparisons.md](references/comparisons.md). When charting one produced spec against framework benchmarks, place the spec as a distinct foreground mark and framework configurations as dated background context; do not call it a like-for-like harness ranking. When comparing versions, assess each with the same rubric and scope. Record the common ancestor when available; distinguish verified local changes from intervening upstream changes. Show default behavior separately from optional capability. Do not imply a controlled before/after experiment when the versions have different bases.
 
