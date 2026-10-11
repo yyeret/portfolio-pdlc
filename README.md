@@ -153,7 +153,7 @@ blanket claim about a framework brand. No portfolio workspace is required.
    like — including via your harness's recurring/goal-loop mechanism.
 
 Works from Claude Code, Codex, Gemini CLI / Antigravity, and anything else that reads
-files and runs `python3`. Harness pointers: `CLAUDE.md`, `GEMINI.md`, `AGENTS.md`.
+files and runs `python3`. Canonical instructions: `AGENTS.md` (loaded natively by Claude Code 2.1.277+); Gemini pointer: `GEMINI.md`.
 
 ## The operating principles
 
