@@ -1,7 +1,7 @@
 {
   "name": "portfolio-pdlc",
-  "version": "1.0.0",
-  "description": "An AI-native, agentic product development lifecycle your coding agents can actually run. Turns any folder into a living portfolio board — initiatives as cards with evidence-verified stages, generated kanban and flow metrics, decision briefs for the calls only humans should make, and Monte Carlo simulation as the discovery tool for the operating model itself. Includes flow-driven: the same thinking one altitude down, for engineering a single value stream into an agentic loop.",
+  "version": "2.0.0",
+  "description": "An AI-native, agentic product development lifecycle your coding agents can run: initiatives as evidence-backed cards, generated portfolio flow, human investment decisions, and Monte Carlo discovery for operating-model changes.",
   "skills": "./skills/",
   "author": {
     "name": "Yuval Yeret",
@@ -24,7 +24,7 @@
   "interface": {
     "displayName": "Portfolio PDLC",
     "shortDescription": "An AI-native, agentic product development lifecycle your coding agents can actually run. Turns any folder into a...",
-    "longDescription": "An AI-native, agentic product development lifecycle your coding agents can actually run. Turns any folder into a living portfolio board — initiatives as cards with evidence-verified stages, generated kanban and flow metrics, decision briefs for the calls only humans should make, and Monte Carlo simulation as the discovery tool for the operating model itself. Includes flow-driven: the same thinking one altitude down, for engineering a single value stream into an agentic loop.",
+    "longDescription": "An AI-native, agentic product development lifecycle your coding agents can run: initiatives as evidence-backed cards, generated portfolio flow, human investment decisions, and Monte Carlo discovery for operating-model changes.",
     "developerName": "Yuval Yeret",
     "category": "Product & Portfolio"
   }

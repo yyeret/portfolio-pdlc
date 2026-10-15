@@ -1,29 +1,25 @@
 # Portfolio PDLC — Agent Instructions
 
-This repo holds **operating systems for coding agents, built on flow**: plain-markdown
-skills, deterministic scripts, templates, and practice workspaces. Everything works the
-same from Claude Code, Codex, Gemini CLI / Antigravity, or any agent that can read files
-and run `python3`.
+This repo holds **Portfolio PDLC**: a portfolio-level product development lifecycle for
+significant investments, evidence-verified stages, and human investment decisions. Its
+plain-markdown skills, deterministic scripts, templates, and practice workspace run from
+Claude Code, Codex, Gemini CLI / Antigravity, or any agent that can read files and run
+`python3`.
 
-Two families live here:
-
-- **`portfolio-pdlc`** — a portfolio-level product development lifecycle: significant
-  investments, evidence-verified stages, human investment decisions.
-- **`flow-driven`** — agentic loop engineering for any single value stream (PDLC, SDLC,
-  content pipeline, AI use cases, operational request streams): definition of workflow,
-  per-step delegate and run models, evidence exits, orchestration, and a meta-loop.
+The generic single-value-stream framework now lives in the separate
+[`flow-driven`](https://github.com/yyeret/flow-driven) repository. It is private while it
+is hardened against real workflows and will be public later. Portfolio PDLC is a domain
+instance and neighbour of that framework, not its canonical owner.
 
 ## How to work here
 
-1. **Entry point**: read `skills/portfolio-pdlc/SKILL.md` for portfolio work, or
-   `skills/flow-driven/SKILL.md` for a single value stream — each carries its operating loop,
-   its leverage table, and the routing to member skills. Load member skills
+1. **Entry point**: read `skills/portfolio-pdlc/SKILL.md`. It carries the operating loop,
+   leverage table, and routing to member skills. Load member skills
    (`skills/<name>/SKILL.md`) only when the loop routes you there; each references
    companion material alongside it in `skills/<name>/` (load only what you need).
 2. **State lives in card frontmatter.** `board.md` and `flow-log.csv` inside a workspace
    are generated projections — regenerate them with
-   `skills/portfolio-pdlc/scripts/portfolio_board.py` (portfolio) or
-   `skills/flow-driven/scripts/flow_board.py` (flow), never hand-edit.
+   `skills/portfolio-pdlc/scripts/portfolio_board.py`, never hand-edit.
 3. **Humans keep the decisions**: invest, commit, pivot, kill, reorganize. You prepare
    decision briefs; a dated Decision-log entry naming a human is required before any card
    crosses a decision boundary.
@@ -39,9 +35,8 @@ Two families live here:
 deliberately seeded smells (see its README). Run the loop there before wiring a real
 portfolio with `skills/portfolio-pdlc-wire/SKILL.md`.
 
-`skills/flow-driven/example/fiy-content-engine/` is the same fictional company's content
-value stream, wired as a flow workspace with its own seeded smells. Run cycles there before
-defining a real stream with `skills/flow-driven-define/SKILL.md`.
+For a single operational or development value stream, use the practice workspace and
+definition skills in [`flow-driven`](https://github.com/yyeret/flow-driven).
 
 ## Conventions
 
@@ -72,9 +67,9 @@ That is this repo running its own delegation ladder on itself: merging sits at r
 the agent runs it, the quality bar is the independent check that makes it safe, and the
 escalation list is the `escalate_when`. The verifier is never the doer.
 
-## Specs
+## Framework relationship
 
-`docs/specs/flow-driven.md` is the requirement-level spec for the flow-driven
-meta-framework — the thing to be extracted from this repo later, of which `portfolio-pdlc`
-is one instance. Keep it in step with what `skills/flow-driven*` actually does; requirement
-ids (`R1`…`R27`) are stable and referenced by the extraction plan.
+The requirement-level Flow-Driven specification and generic contracts are canonical in
+[`yyeret/flow-driven`](https://github.com/yyeret/flow-driven). Changes needed by Portfolio
+PDLC should be raised there as evidence-backed framework improvements rather than copied
+into this repository.
