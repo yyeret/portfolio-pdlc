@@ -80,6 +80,9 @@ Worked instance: `../example/fiy-content-engine/`.
 The eval **is** the evidence exit. An AI use-case stream without one is a demo pipeline, and
 flow-driven will make that embarrassingly visible, which is the point.
 
+For an executable workspace that carries a broader set of changes through adoption and
+outcome review, use the [performance intervention PDLC](../templates/performance-interventions/README.md).
+
 ---
 
 ## `research` / analysis
