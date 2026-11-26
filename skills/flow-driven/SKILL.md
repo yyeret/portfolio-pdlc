@@ -133,6 +133,7 @@ still open, evidence vs opinion, options with trade-offs, a recommendation — p
 | "Run it where we already work — GitHub, Jira, a dashboard" | `flow-driven-integrate` |
 | Advance the flow; run a cycle; prepare a decision | `flow-driven-run` |
 | "Is the loop itself any good?" / cadence review | `flow-driven-evolve` |
+| Run a PDLC for business or organizational performance interventions | [Performance intervention workspace](templates/performance-interventions/README.md) |
 | Portfolio of investments rather than a single stream | `portfolio-pdlc` (in this repo) |
 | Deep diagnostic of one initiative | `sniff-test` (in this repo) |
 
