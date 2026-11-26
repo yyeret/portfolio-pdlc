@@ -1,9 +1,9 @@
 ---
 name: portfolio-pdlc-advance
-description: Advance ONE initiative (or improvement bet) through the portfolio PDLC — do the stage-appropriate work that grows confidence, and prepare (never make) the human decision at the next boundary. Use when an item is aging, a discovery timebox lapsed without a recommendation, a decision is due or overdue, or a card is ready to move stage. The loop-1 skill of the portfolio-pdlc family.
+description: Advance ONE initiative (or improvement bet) through the portfolio PDLC — do the stage-appropriate work that grows confidence, and prepare (never make) the human decision at the next boundary. Use when an item is aging, a discovery timebox lapsed without a recommendation, a decision is due or overdue, a decision-critical assumption needs a small test, or a card is ready to move stage. The loop-1 skill of the portfolio-pdlc family.
 metadata:
   tags: flow-agile, product-strategy
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Portfolio PDLC — Advance
@@ -34,6 +34,18 @@ called ad-hoc, take the named card). Everything else you notice goes to the loop
 
 Improvement cards advance the same way; their discovery is a probe, a one-review pilot, or
 a `portfolio-pdlc-simulate` scenario.
+
+## De-risk a decision-critical assumption
+
+Use this path when an open assumption could change the next investment decision and the
+current evidence cannot settle it. Load [the de-risking guide](references/derisking.md)
+to coach the owner through one assumption, the smallest useful test, and a recommendation.
+A finding can also justify a recommendation to skip discovery.
+
+An overdue decision takes precedence. Bring the evidence and any proposed follow-up test
+to the decision owner. Start a new timebox only when the decision owner agrees to it.
+In a headless cycle, record the decision-changing evidence gap and next action in the
+brief and stop at the existing human decision boundary.
 
 ## Decision boundaries — prepare, don't cross
 

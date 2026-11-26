@@ -24,6 +24,10 @@ and exist to make throughput/cycle-time metrics computable.
 
 ## Exercises
 
+For a worked de-risking exercise, follow
+[the churn-save walkthrough](initiatives/churn-save-desk-reduction/derisking-walkthrough.md)
+from the overdue decision through a small test and Mary's decision.
+
 1. `python3 ../../scripts/portfolio_board.py .` — regenerate the board; read the flags.
 2. Run one operating-loop cycle per the umbrella skill — the leverage table should route
    you to the overdue decision on `churn-save-desk-reduction` first.
